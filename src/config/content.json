@@ -1,0 +1,251 @@
+{
+  "nav": {
+    "name": "Your Name",
+    "menu": [
+      {
+        "text": "Home",
+        "link": "#home"
+      },
+      {
+        "text": "About",
+        "link": "#about"
+      },
+      {
+        "text": "Skills",
+        "link": "#skills"
+      },
+      {
+        "text": "Experience",
+        "link": "#experience"
+      },
+      {
+        "text": "Projects",
+        "link": "#projects"
+      },
+      {
+        "text": "Contact",
+        "link": "#contact"
+      }
+    ]
+  },
+  "hero": {
+    "greeting": "Hi",
+    "name": "Your Name",
+    "title": "Full Stack Developer",
+    "description": "I build exceptional and accessible digital experiences for the web.",
+    "image": "/images/avatar.png",
+    "resume": "https://technical-resume.edgeone.app/"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Write a detailed description about yourself, your background, and your interests. This section helps visitors get to know you better.",
+    "button": "Download CV",
+    "image": "/images/avatar.png"
+  },
+  "skills": {
+    "title": "My Skills",
+    "categories": [
+      {
+        "title": "Frontend",
+        "skills": [
+          {
+            "name": "HTML",
+            "image": "/images/html.png"
+          },
+          {
+            "name": "CSS",
+            "image": "/images/Css.png"
+          },
+          {
+            "name": "JavaScript",
+            "image": "/images/js.png"
+          },
+          {
+            "name": "React",
+            "image": "/images/react.png"
+          },
+          {
+            "name": "Bootstrap",
+            "image": "/images/bootstrap.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Backend",
+        "skills": [
+          {
+            "name": "Node.js",
+            "image": "/images/nodejs.png"
+          },
+          {
+            "name": "Express",
+            "image": "/images/express-js.png"
+          },
+          {
+            "name": "MongoDB",
+            "image": "/images/mongo.png"
+          },
+          {
+            "name": "MySQL",
+            "image": "/images/mysql.png"
+          },
+          {
+            "name": "PostgreSQL",
+            "image": "/images/post.png"
+          }
+        ]
+      },
+      {
+        "title": "Data Science",
+        "skills": [
+          {
+            "name": "Python",
+            "image": "/images/python.png"
+          },
+          {
+            "name": "TensorFlow",
+            "image": "/images/tensor.png"
+          },
+          {
+            "name": "PyTorch",
+            "image": "/images/deep.png"
+          },
+          {
+            "name": "Scikit-learn",
+            "image": "/images/scikit.png"
+          },
+          {
+            "name": "Pandas",
+            "image": "/images/pandas.png"
+          },
+          {
+            "name": "NumPy",
+            "image": "/images/numpy.png"
+          },
+          {
+            "name": "Matplotlib",
+            "image": "/images/matplot.png"
+          },
+          {
+            "name": "Seaborn",
+            "image": "/images/seaborn.png"
+          }
+        ]
+      },
+      {
+        "title": "Tools",
+        "skills": [
+          {
+            "name": "Git",
+            "image": "/images/git.png"
+          },
+          {
+            "name": "VS Code",
+            "image": "/images/vscode.jpg"
+          },
+          {
+            "name": "Jupyter",
+            "image": "/images/jupyter.png"
+          },
+          {
+            "name": "Figma",
+            "image": "/images/figma.png"
+          },
+          {
+            "name": "Canva",
+            "image": "/images/canva.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "timeline": [
+      {
+        "title": "Job Title",
+        "company": "Company Name",
+        "period": "Duration",
+        "description": "Describe your responsibilities and achievements in this role. Highlight key projects and skills used."
+      },
+      {
+        "title": "Previous Job Title",
+        "company": "Previous Company",
+        "period": "Duration",
+        "description": "Describe your previous role, responsibilities, and achievements. Focus on relevant experience and skills."
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "Project 1",
+        "description": "A brief description of your first project. Explain what it does and what technologies you used.",
+        "technologies": ["List", "Your", "Technologies"],
+        "github": "https://github.com/TencentEdgeOne",
+        "site": "https://github.com/TencentEdgeOne",
+        "image": "/images/project-2-cover.jpg"
+      },
+      {
+        "title": "Project 2",
+        "description": "A brief description of your second project. Explain what it does and what technologies you used.",
+        "technologies": ["List", "Your", "Technologies"],
+        "github": "https://github.com/TencentEdgeOne",
+        "site": "https://github.com/TencentEdgeOne",
+        "image": "/images/project-3-cover.png"
+      },
+      {
+        "title": "Project 3",
+        "description": "A brief description of your third project. Explain what it does and what technologies you used.",
+        "technologies": ["List", "Your", "Technologies"],
+        "github": "https://github.com/TencentEdgeOne",
+        "site": "https://github.com/TencentEdgeOne",
+        "image": "/images/project-4-cover.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Feel free to reach out to me for any questions or opportunities!",
+    "emailjs": {
+      "service_id": "YOUR_SERVICE_ID",
+      "template_id": "YOUR_TEMPLATE_ID",
+      "public_key": "YOUR_PUBLIC_KEY",
+      "to_email": "your-email@example.com"
+    },
+    "info": {
+      "email": "your.email@example.com",
+      "phone": "+86 188 1367 6461",
+      "location": "Your Location"
+    },
+    "social": [
+      {
+        "name": "GitHub",
+        "icon": "github",
+        "link": "https://github.com/TencentEdgeOne"
+      },
+      {
+        "name": "LinkedIn",
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/company/tencentedgeone"
+      },
+      {
+        "name": "Medium",
+        "icon": "medium",
+        "link": "https://medium.com/tencent-cloud/welcome-to-tencent-edgeone-e4eab9100ebc"
+      },
+      {
+        "name": "Instagram",
+        "icon": "instagram",
+        "link": "https://x.com/TencentCloudEO"
+      }
+    ],
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message"
+    }
+  }
+} 
