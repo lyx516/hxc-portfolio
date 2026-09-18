@@ -23,16 +23,7 @@ npm run sync       # 从 reference/ 里的原始单文件页面重新生成页�
 2. 把 `out/` 目录整个上传（网站根目录指向 `out/index.html`）
 
 页面里的图片用的是相对路径 `assets/…`，放在子目录（比如 `https://example.com/portfolio/`）也能正常显示。
-但如果整个站点要挂在子路径下，`_next/…` 这些引用是绝对路径，需要在 [next.config.mjs](next.config.mjs) 里补上：
-
-```js
-const nextConfig = {
-  output: 'export',
-  basePath: '/portfolio',   // 换成实际子路径
-  assetPrefix: '/portfolio',
-  images: { unoptimized: true },
-};
-```
+但如果整个站点要挂在子路径下，`_next/…` 这些引用是绝对路径，要用 `BASE_PATH=/子路径 npm run build` 构建（见[方式三](#方式三github-pages已配好自动部署)）。
 
 ### 方式二：Vercel / EdgeOne Pages / Netlify 等
 
@@ -42,7 +33,25 @@ const nextConfig = {
 
 （这些平台连仓库后按上面的配置即可，框架预设选 Next.js 也可以，`output: 'export'` 会自动走静态导出。）
 
-### 方式三：本地直接看构建结果
+注意：**EdgeOne Pages 的默认域名只是预览链接**，只对生成它的那个浏览器有效，换设备打开会返回 `401 UNAUTHORIZED`。要给别人（HR、评委）打开，得在控制台「域名管理 → 添加自定义域名」绑自己的域名；加速区域选「全球（不含中国大陆）」不需要实名/备案，但国内访问速度一般。
+
+### 方式三：GitHub Pages（已配好自动部署）
+
+仓库里放了 [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml)，推到 `main` 就自动构建并发布：
+
+1. 仓库 Settings → Pages → Source 选 **GitHub Actions**（只需做一次；workflow 里也带了自动开启，失败就手动选一下）。
+2. 推代码后到 Actions 页面看 `Deploy to GitHub Pages` 跑完。
+3. 站点地址：<https://lyx516.github.io/hxc-portfolio/>
+
+项目页挂在 `/<仓库名>/` 子路径下，workflow 会自动把仓库名算成 `BASE_PATH` 交给构建（见 [next.config.mjs](next.config.mjs)）；改了仓库名也不用改配置。手动构建子路径版本：
+
+```bash
+BASE_PATH=/hxc-portfolio npm run build
+```
+
+（`out/` 里提交的是不带子路径的版本，用于方式一/二；GitHub Pages 用的是 CI 自己构建的子路径版本。）
+
+### 方式四：本地直接看构建结果
 
 ```bash
 npx serve out        # 或 python3 -m http.server -d out 3000
@@ -63,6 +72,7 @@ npx serve out        # 或 python3 -m http.server -d out 3000
 | [reference/胡雪纯｜美术教师作品集.html](reference/胡雪纯｜美术教师作品集.html) | 桌面作品集的原始单文件页面（改内容的源头） |
 | [reference/说明.md](reference/说明.md) | 原始页面的文件说明、页面结构、待办与踩坑记录 |
 | [scripts/extract-portfolio.mjs](scripts/extract-portfolio.mjs) | 拆分脚本：原始 HTML → 上面的三个自动生成文件 |
+| [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml) | 推到 main 后自动构建并发布到 GitHub Pages |
 
 ## 改内容 / 改样式
 
