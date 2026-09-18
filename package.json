@@ -1,10 +1,10 @@
 {
-  "name": "minimalist-portfolio",
+  "name": "hxc-portfolio",
   "version": "0.1.0",
   "private": true,
-  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).",
-  "main": "index.js",
+  "description": "胡雪纯｜美术教师作品集。Next.js 静态导出，页面内容来自桌面「作品集」文件夹。",
   "scripts": {
+    "sync": "node scripts/extract-portfolio.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -14,7 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@emailjs/browser": "^4.1.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"

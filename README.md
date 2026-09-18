@@ -1,147 +1,87 @@
-# Minimalist Portfolio
+# 胡雪纯｜美术教师作品集
 
-A clean and minimalist portfolio website template built with Next.js.
+桌面「作品集」文件夹里的单文件网页版作品集，整体迁移到这个 Next.js 项目里。
+设计、文案、图片与交互全部来自桌面作品集，没有保留原模板的任何内容。
 
-## Quick Deploy
-
-Click the button below to deploy to Tencent Cloud EdgeOne with one click:
-
-[![Deploy to Tencent Cloud](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?template=https://github.com/tomcomtang/minimalist-portfolio&output-directory=./out&build-command=npm%20run%20build&install-command=npm%20install)
-
-## Features
-
-- Responsive design
-- Configurable content
-- Modern UI/UX
-- Easy to customize
-
-## Quick Start
-
-1. Clone the repository:
+## 命令
 
 ```bash
-git clone https://github.com/tomcomtang/minimalist-portfolio
-cd minimalist-portfolio
+npm install        # 安装依赖（Node 18 以上）
+npm run dev        # 本地预览 http://localhost:3000
+npm run build      # 静态导出，产物在 out/
+npm run sync       # 从 reference/ 里的原始单文件页面重新生成页面样式、正文与脚本
 ```
 
-2. Install dependencies:
+`npm run build` 使用 Next.js 的 `output: 'export'`（见 [next.config.mjs](next.config.mjs)），
+生成的是纯静态站点，不需要 Node 运行时。
+
+## 部署
+
+### 方式一：任意静态空间 / 对象存储
+
+1. `npm install && npm run build`
+2. 把 `out/` 目录整个上传（网站根目录指向 `out/index.html`）
+
+页面里的图片用的是相对路径 `assets/…`，放在子目录（比如 `https://example.com/portfolio/`）也能正常显示。
+但如果整个站点要挂在子路径下，`_next/…` 这些引用是绝对路径，需要在 [next.config.mjs](next.config.mjs) 里补上：
+
+```js
+const nextConfig = {
+  output: 'export',
+  basePath: '/portfolio',   // 换成实际子路径
+  assetPrefix: '/portfolio',
+  images: { unoptimized: true },
+};
+```
+
+### 方式二：Vercel / EdgeOne Pages / Netlify 等
+
+- 安装命令：`npm install`
+- 构建命令：`npm run build`
+- 输出目录：`out`
+
+（这些平台连仓库后按上面的配置即可，框架预设选 Next.js 也可以，`output: 'export'` 会自动走静态导出。）
+
+### 方式三：本地直接看构建结果
 
 ```bash
-npm install
+npx serve out        # 或 python3 -m http.server -d out 3000
 ```
 
-3. Modify configuration:
-   Edit the `src/config/content.json` file to update your personal information, projects, skills, and other content.
+## 目录结构
 
-4. Run development server:
+| 路径 | 内容 |
+|---|---|
+| [src/app/page.tsx](src/app/page.tsx) | 首页：把作品集正文挂到页面上 |
+| [src/app/layout.tsx](src/app/layout.tsx) | 站点外壳：`lang="zh-CN"`、标题与描述 |
+| [src/app/icon.png](src/app/icon.png) | 站点小图标（由作品集里的剪纸《生命树》裁出） |
+| [src/app/globals.css](src/app/globals.css) | 页面样式（自动生成） |
+| [src/config/portfolio-body.ts](src/config/portfolio-body.ts) | 页面正文 HTML（自动生成） |
+| [src/components/portfolio-script.tsx](src/components/portfolio-script.tsx) | 挂载交互脚本的客户端组件 |
+| [public/portfolio.js](public/portfolio.js) | 放大查看 / 键盘切换 / 顶栏高亮脚本（自动生成） |
+| [public/assets/](public/assets) | 116 张图片：59 件作品各一张缩略图（`_t`，长边 780px）与一张大图（长边 1700px） |
+| [reference/胡雪纯｜美术教师作品集.html](reference/胡雪纯｜美术教师作品集.html) | 桌面作品集的原始单文件页面（改内容的源头） |
+| [reference/说明.md](reference/说明.md) | 原始页面的文件说明、页面结构、待办与踩坑记录 |
+| [scripts/extract-portfolio.mjs](scripts/extract-portfolio.mjs) | 拆分脚本：原始 HTML → 上面的三个自动生成文件 |
+
+## 改内容 / 改样式
+
+页面正文、样式、脚本都由 [reference/胡雪纯｜美术教师作品集.html](reference/胡雪纯｜美术教师作品集.html) 这一个文件生成，改的时候只改它，然后：
 
 ```bash
-npm run dev
+npm run sync       # 重新生成 globals.css、portfolio-body.ts、public/portfolio.js
+npm run dev        # 本地看效果
 ```
 
-5. Build for production:
+图片放在 [public/assets/](public/assets)，命名规则见 [reference/说明.md](reference/说明.md)：
+带 `_t` 的是列表用缩略图，不带的是点击放大用的大图。
 
-```bash
-npm run build
-```
+`npm run sync` 会核对正文引用的每张图片是否都在 `public/assets/` 里，缺图会报错并返回非零退出码。
 
-## Live Demo
+## 交接时需要补的内容
 
-[View the live demo here](https://minimalist-portfolio.edgeone.app/)
+原始页面的待办（见 [reference/说明.md](reference/说明.md)）：
 
-## Configuration File Guide
-
-All website content can be configured in the `src/config/content.json` file. The configuration file includes the following sections:
-
-### Navigation Bar (nav)
-
-- `name`: Website name
-- `menu`: Navigation menu items list
-
-### Homepage (hero)
-
-- `greeting`: Greeting message
-- `name`: Your name
-- `title`: Your position
-- `description`: Brief description
-
-### About (about)
-
-- `title`: Section title
-- `description`: Description about you
-- `button`: Resume download button text
-
-### Skills (skills)
-
-- `title`: Skills section title
-- `categories`: Skills categories list
-  - Each category includes `title` and `skills` array
-  - Each skill includes `name` and `image` path
-
-### Experience (experience)
-
-- `title`: Experience section title
-- `timeline`: Experience timeline list
-  - Each experience includes `title`, `company`, `period`, and `description`
-
-### Projects (projects)
-
-- `title`: Projects section title
-- `items`: Projects list
-  - Each project includes `title`, `description`, `technologies`, `github` link, and `image` path
-
-### Contact (contact)
-
-- `title`: Contact section title
-- `info`: Contact information
-  - `email`: Email address
-  - `phone`: Phone number
-  - `location`: Location
-- `social`: Social media links list
-  - Each link includes `name`, `icon`, and `link`
-- `form`: Contact form text
-  - `name`: Name input label
-  - `email`: Email input label
-  - `message`: Message input label
-  - `submit`: Submit button text
-- `emailjs`: EmailJS configuration
-  - `service_id`: EmailJS service ID (obtain from EmailJS dashboard)
-  - `template_id`: EmailJS template ID (obtain from EmailJS dashboard)
-  - `public_key`: EmailJS public key (obtain from EmailJS dashboard)
-  - `to_email`: Recipient email address
-
-## EmailJS Configuration Guide
-
-1. Register for an [EmailJS](https://www.emailjs.com/) account
-2. Create an Email Service:
-   - After logging in, click "Email Services"
-   - Click "Add New Service"
-   - Choose an email provider (e.g., Gmail, Outlook)
-   - Follow the steps to connect your email account
-   - You'll receive a `Service ID` upon completion
-3. Create an Email Template:
-   - Click "Email Templates"
-   - Click "Create New Template"
-   - Design your email template using these variables:
-     - `{{from_name}}` - Sender's name
-     - `{{from_email}}` - Sender's email
-     - `{{message}}` - Message content
-     - `{{to_email}}` - Recipient's email
-   - Save to get a `Template ID`
-4. Get Public Key:
-   - Go to the "Account" page in EmailJS dashboard
-   - Find the "API Keys" section
-   - Copy the `Public Key`
-5. Configure these details in `src/config/content.json`
-
-## Customizing Styles
-
-All styles are in the `public/style.css` file. You can modify colors, fonts, spacing, and more according to your needs.
-
-## Contributing
-
-Pull requests and issues are welcome.
-
-## License
-
-MIT License
+1. 动画门类 6 件作品预留了视频入口，`data-video=""` 还是空的，填上视频网址后，放大查看时才会出现「▶ 观看动画视频」。
+2. 版画五件作品的题名、国画三件的作品名是按画心下沿的铅笔题名 / 看图命名，需要本人核对。
+3. 首屏作品图目前是剪纸《生命树》（`assets/img36.jpg`），可以换。
