@@ -1,175 +1,71 @@
 3:I[9091,["931","static/chunks/app/page-31afe5a4ff6b229a.js"],""]
 4:I[5613,[],""]
 5:I[1778,[],""]
-2:T113d0,<a class="skip" href="#works">跳到作品</a>
+2:T102ac,<a class="skip" href="#works">跳到作品</a>
 
 <nav class="bar" id="bar" aria-label="作品门类导航">
   <span class="bar__name">胡雪纯　美术教师作品集</span>
   <span class="bar__links">
-    <a href="#toc">目录</a><a href="#c1">教学</a><a href="#practice">个人实践</a><a href="#c2">书法</a><a href="#c3">剪纸</a>
-    <a href="#c4">国画</a><a href="#c5">版画</a><a href="#c6">油画</a><a href="#c7">综合材料</a>
-    <a href="#c8">水彩</a><a href="#c9">马克笔</a><a href="#c10">设计</a><a href="#c11">动画</a>
-    <a href="#c12">素描</a><a href="#micro">微课</a><a href="#ai">AI</a>
-    <a href="#contact">联系</a>
+    <a href="#toc">目录</a><a href="#c1">教具与教学设计</a><a href="#micro" class="grp">微课</a><a href="#ai">数字美育资源</a>
+    <a href="#c10" class="grp">设计</a><a href="#c11">动画</a>
+    <a href="#c9" class="grp">民间美术</a><a href="#c3">剪纸</a><a href="#c2">书法</a><a href="#c7">综合材料</a>
+    <a href="#c4" class="grp">国画</a><a href="#c5">版画</a><a href="#c12">素描</a><a href="#c8">水彩</a><a href="#c6">油画</a>
+    <a href="#practice" class="grp">个人实践</a>
   </span>
 </nav>
 
 <header class="hero" id="top">
   <div class="hero__inner">
     <div class="hero__text">
-      <p class="hero__id">胡雪纯　应聘中学美术教师</p>
+      <p class="hero__id">胡雪纯　应聘美术教师</p>
       <h1 class="hero__h1">美术教师作品集</h1>
-      <p class="hero__sub">绘画、书法、剪纸、民间美术与课堂教学的记录。</p>
-      <hr class="hero__rule">
-      <p class="hero__meta"><b>十四个栏目 · <span class="nb">四十七件</span>作品</b>　个人实践 <span class="nb">10 张</span>　微课与 AI <span class="nb">数字美育 4 张</span></p>
     </div>
-    <figure class="hero__work">
-      <img src="assets/img36.jpg" alt="大红剪纸「生命树」：树冠与枝干内嵌生肖动物与人物，底部为红色地面与花草" width="1492" height="1700" fetchpriority="high">
-      <figcaption>剪纸《生命树》· 民间美术</figcaption>
-    </figure>
-  </div>
-  <div class="hero__lede">
-    <div>
-      <p class="lead">绘画是我的专业基础，我也喜欢尝试不同的材料和创作方式。这本作品集收录了我的绘画、<span class="nb">书法</span>、剪纸、羊毛毡、雕塑，以及摄影、设计、<span class="nb">动画和 AI 数字美育。</span></p>
-      <p class="lead">我希望把这些创作经验带进美术课堂：除了纸上的绘画，也让学生接触多样的手工制作和数字创作，<span class="nb">找到自己喜欢的表达方式。</span></p>
-    </div>
-    <p class="teach">首都师范大学 小学教育（美术）硕士<br>东北师范大学 美术学（师范）本科<br><span class="nb">高中美术教师资格证</span> · 中小学授课 <span class="nb">2000 余课时、60 余名学生</span><br>投递邮箱 <b>2253002153@cnu.edu.cn</b>　手机 <b>138 0637 0838</b></p>
   </div>
 </header>
 
 <section class="wrap toc" id="toc" aria-labelledby="h-toc">
   <h2 class="toc__title" id="h-toc">
     <span class="toc__word" aria-label="CONTENTS"><i>C</i><i>O</i><i>N</i><i>T</i><i>E</i><i>N</i><i>T</i><i>S</i></span>
-    <span class="toc__cn">作品集目录 · 十四个栏目<svg class="toc__arrow" viewBox="0 0 74 46" aria-hidden="true"><path d="M5 6c15-2 29 4 37 15 4 6 7 13 9 19"/><path d="M41 32l10 8 2-12"/></svg></span>
   </h2>
-  <ol class="toc__grid">
-      <li class="toc__item">
-        <a href="#c1">
-          <span class="toc__num">1</span>
-          <span class="toc__text">
-            <span class="toc__name">教学</span><svg class="toc__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.3 6.2 6.6 1.3-5 4.3 1.4 6.5L10 16.5 4.7 19.9 6.1 13.4 1.1 9.1l6.6-1.3z"/></svg>
-            <span class="toc__desc">黑板布置、纸艺展板与<span class="nb">导览图</span>；教具获省级教学创新三等奖。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c2">
-          <span class="toc__num">2</span>
-          <span class="toc__text">
-            <span class="toc__name">书法</span>
-            <span class="toc__desc">篆隶基础与题款，竖幅章法与落款。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c3">
-          <span class="toc__num">3</span>
-          <span class="toc__text">
-            <span class="toc__name toc__name--line">剪纸<svg class="toc__line" viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M3 6c20-4 42-5 64-4 16 .8 32 2.4 50 4.6"/></svg></span>
-            <span class="toc__desc">民俗纹样与叶雕，从折剪到镂空。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c4">
-          <span class="toc__num">4</span>
-          <span class="toc__text">
-            <span class="toc__name">国画</span>
-            <span class="toc__desc">水墨山水与人物写生，讲浓淡与留白。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c5">
-          <span class="toc__num">5</span>
-          <span class="toc__text">
-            <span class="toc__name">版画</span>
-            <span class="toc__desc">木刻与铜<span class="nb">版画</span>，版次与签名常识。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c6">
-          <span class="toc__num">6</span>
-          <span class="toc__text">
-            <span class="toc__name">油画</span>
-            <span class="toc__desc">布面与小幅组画，色彩与叙事。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c7">
-          <span class="toc__num">7</span>
-          <span class="toc__text">
-            <span class="toc__name">综合材料</span>
-            <span class="toc__desc">立体构成与手工灯具，动手就出效果。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c8">
-          <span class="toc__num">8</span>
-          <span class="toc__text">
-            <span class="toc__name">水彩</span>
-            <span class="toc__desc">观察记录与荷塘写生，先线后色。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c9">
-          <span class="toc__num">9</span>
-          <span class="toc__text">
-            <span class="toc__name">马克笔</span>
-            <span class="toc__desc">团花、年节与戏曲人物，直接对应教材里的民间美术内容。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c10">
-          <span class="toc__num">10</span>
-          <span class="toc__text">
-            <span class="toc__name">设计</span>
-            <span class="toc__desc">活动海报与游戏人物 IP 设定，两组共五件。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item toc__item--ring">
-        <a href="#c11">
-          <span class="toc__num">11</span>
-          <span class="toc__text">
-            <span class="toc__name">动画</span>
-            <span class="toc__desc">两部动画短片的分镜、绘制与合成。</span>
-          </span>
-            <svg class="toc__ring" viewBox="0 0 100 78" aria-hidden="true"><path d="M50 10c18 0 33 3 40 8 5 4 6 12 6 21s-1 17-6 21c-7 5-22 8-40 8-18 0-33-3-40-8-5-4-6-12-6-21s1-17 6-21c7-5 22-8 40-8z"/></svg>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#c12">
-          <span class="toc__num">12</span>
-          <span class="toc__text">
-            <span class="toc__name">素描</span>
-            <span class="toc__desc">炭笔人物与肖像，明暗与结构。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#micro">
-          <span class="toc__num">13</span>
-          <span class="toc__text">
-            <span class="toc__name">微课</span>
-            <span class="toc__desc">自己录、自己剪的美术微课，<span class="nb">一至三年级</span>都有。</span>
-          </span>
-        </a>
-      </li>
-      <li class="toc__item">
-        <a href="#ai">
-          <span class="toc__num">14</span>
-          <span class="toc__text">
-            <span class="toc__name">AI 数字美育</span>
-            <span class="toc__desc">学情诊断页与虚拟展馆，把美术课做成能走一遍的网页。</span>
-          </span>
-        </a>
-      </li>
+  <p class="toc__hint">点击任意作品可放大查看；放大后<span class="hint-fine">按左右方向键</span><span class="hint-coarse">点两侧箭头</span>翻看上一件、下一件。</p>
+  <ol class="toc__groups">
+    <li class="toc__group toc__group--ring">
+      <p class="toc__gh"><span class="toc__numwrap"><span class="toc__num">1</span><svg class="toc__ring" viewBox="0 0 100 78" preserveAspectRatio="none" aria-hidden="true"><path d="M50 10c18 0 33 3 40 8 5 4 6 12 6 21s-1 17-6 21c-7 5-22 8-40 8-18 0-33-3-40-8-5-4-6-12-6-21s1-17 6-21c7-5 22-8 40-8z"/></svg></span><a class="toc__name" href="#c1">教学资源设计</a><svg class="toc__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.3 6.2 6.6 1.3-5 4.3 1.4 6.5L10 16.5 4.7 19.9 6.1 13.4 1.1 9.1l6.6-1.3z"/></svg></p>
+      <ul class="toc__subs">
+        <li class="toc__item"><a href="#c1">教具与教学设计</a></li>
+        <li class="toc__item"><a href="#micro">微课</a></li>
+        <li class="toc__item"><a href="#ai">数字美育资源</a></li>
+      </ul>
+    </li>
+    <li class="toc__group">
+      <p class="toc__gh"><span class="toc__numwrap"><span class="toc__num">2</span></span><a class="toc__name" href="#c10">视觉设计</a></p>
+      <ul class="toc__subs">
+        <li class="toc__item"><a href="#c10">设计</a></li>
+        <li class="toc__item"><a href="#c11">动画</a></li>
+      </ul>
+    </li>
+    <li class="toc__group">
+      <p class="toc__gh"><span class="toc__numwrap"><span class="toc__num">3</span></span><a class="toc__name" href="#c9">传统文化与综合材料</a></p>
+      <ul class="toc__subs">
+        <li class="toc__item"><a href="#c9">民间美术</a></li>
+        <li class="toc__item toc__item--line"><a href="#c3">剪纸<svg class="toc__line" viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true"><path d="M3 6c20-4 42-5 64-4 16 .8 32 2.4 50 4.6"/></svg></a></li>
+        <li class="toc__item"><a href="#c2">书法</a></li>
+        <li class="toc__item"><a href="#c7">综合材料</a></li>
+      </ul>
+    </li>
+    <li class="toc__group">
+      <p class="toc__gh"><span class="toc__numwrap"><span class="toc__num">4</span></span><a class="toc__name" href="#c4">绘画基本功</a></p>
+      <ul class="toc__subs">
+        <li class="toc__item"><a href="#c4">国画</a></li>
+        <li class="toc__item"><a href="#c5">版画</a></li>
+        <li class="toc__item"><a href="#c12">素描</a></li>
+        <li class="toc__item"><a href="#c8">水彩</a></li>
+        <li class="toc__item"><a href="#c6">油画</a></li>
+      </ul>
+    </li>
+    <li class="toc__group">
+      <p class="toc__gh"><span class="toc__numwrap"><span class="toc__num">5</span></span><a class="toc__name" href="#practice">个人实践</a></p>
+    </li>
   </ol>
   <svg class="toc__doodle" viewBox="0 0 140 58" aria-hidden="true">
     <path d="M6 44c7-13 19-22 27-16 8 6 1 19-7 17-8-2-3-15 9-17 13-3 21 7 33 8 9 1 15-3 21-9"/>
@@ -184,15 +80,15 @@
 
 <main class="wrap" id="works">
 
-  <section class="cat" id="c1">
+<section class="cat" id="c1">
     <div class="cat__head">
-      <p class="cat__mark"><em>壹</em> 教学</p>
+      <p class="cat__mark"><em>壹</em> 教具与教学设计</p>
       <div class="cat__meta">
         <strong>课堂教学与校园美育</strong>
         <span>黑板布置、综合纸艺展板、手绘导览图——按教案与活动方案整理，可直接复用到课堂与校园文化布置。</span>
       </div>
     </div>
-    <h3 class="works__group">教具《小花猫在睡觉》<small>作品尺寸 52×37 厘米 · 吉林省师范生教学大赛三等奖</small></h3>
+    <h3 class="works__group">教具《小花猫在睡觉》<small><span class="nb">作品尺寸 52×37 厘米</span><span class="nb sep"> · </span><span class="nb">吉林省师范生教学大赛三等奖</span></small></h3>
     <div class="works--grid2">
       <figure class="w">
         <button class="w__btn" type="button" data-src="assets/aid01.jpg" data-cap="剪纸拼贴教具：菱格窗内「福」字与团花，中部是睡着的猫脸造型，四周为花瓣与团花色块" data-note="说明｜围绕人美版二年级上册《小花猫在睡觉》展开设计。本人负责主题构思、画面设计和教具制作；教具设计立足于东北地域文化特色，用可移动的小花猫、窗景、灯笼和花卉等贴近学生生活的形象组织画面，重点聚焦于小花猫的基本形、明亮色彩和重复纹样等教学重点。">
@@ -258,9 +154,501 @@
     </div>
   </section>
 
+  <section class="cat" id="micro">
+    <div class="cat__head">
+      <p class="cat__mark"><em>贰</em> 微课</p>
+      <div class="cat__meta">
+        <strong>自己录、<span class="nb">自己剪的美术微课</span></strong>
+        <span>面向中小学美术教学开发微课资源，全平台累计播放<span class="nb">5.63 万次</span>。</span>
+      </div>
+    </div>
+    <div class="works works--2">
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/micro02.jpg" data-cap="手机端微课投稿列表截图：四条美术微课，含封面、时长、标题、日期、播放量与评论数" data-note="">
+          <img src="assets/micro02_t.jpg" alt="手机端微课投稿列表截图，四条美术微课带封面与播放量" width="604" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">微课<span class="nb">「延乔微语」</span>bilibili账号</figcaption>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/micro01.jpg" data-cap="手机端账号作品列表截图：三列共十二支视频封面，含美术课例与革命史专题" data-note="">
+          <img src="assets/micro01_t.jpg" alt="手机端账号作品列表截图，十二支视频封面" width="372" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">微课<span class="nb">「延乔微语」</span>bilibili账号</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cat" id="ai">
+    <div class="cat__head">
+      <p class="cat__mark"><em>叁</em> 数字美育资源</p>
+      <div class="cat__meta">
+        <strong>网页作品与虚拟展馆</strong>
+        <span>把美术课的内容做成能在浏览器里走一遍的数字展馆。学习过程会留下数据，<span class="nb">老师看得见。</span></span>
+      </div>
+    </div>
+    <div class="works works--2">
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/ai01.jpg" data-cap="网页截图「京华智能导览 · 学情诊断与分析」：六维度学情雷达图、智能评语生成、本次诊断重点、推荐资源与导出 PDF 报告按钮" data-note="项目｜参与数字美育平台的学情模块：把地图探索、展馆学习、智能问答与学习任务的数据汇总成个体化学情档案，自动生成评语并推荐下一步资源。">
+          <img src="assets/ai01_t.jpg" alt="京华智能导览学情诊断与分析网页截图，含学情雷达图与智能评语" width="780" height="519" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap"><span class="nb"><span class="nb"><span class="nb">「京华智能导览」</span></span></span>学情诊断与分析页</figcaption>
+        <p class="w__note"><b>项目｜</b>数字美育平台的学情模块：把地图探索、展馆学习、智能问答与学习任务的数据汇总成个体化学情档案，自动生成评语并推荐下一步资源。</p>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/ai02.jpg" data-cap="网页截图「京华智能导览 · 数字展览理解」：虚拟展馆首页，含景泰蓝馆、皮影馆、北京近代绘画馆、古籍馆四张展馆卡片与本周特展" data-note="项目｜把景泰蓝、皮影、北京近代绘画与古籍四个专题做成可进入的虚拟展馆，每个展馆配展品与课程资源，学生可以自己走一遍。">
+          <img src="assets/ai02_t.jpg" alt="京华智能导览数字展览理解网页截图，含四个虚拟展馆入口" width="780" height="585" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap"><span class="nb"><span class="nb"><span class="nb">「京华智能导览」</span></span></span>数字展览理解（虚拟展馆）</figcaption>
+        <p class="w__note"><b>项目｜</b>把景泰蓝、皮影、北京近代绘画与古籍四个专题做成可进入的虚拟展馆，每个展馆配展品与课程资源，<span class="nb">学生可以自己走一遍。</span></p>
+      </figure>
+    </div>
+  </section>
+
+
+<section class="cat" id="c10">
+    <div class="cat__head">
+      <p class="cat__mark"><em>肆</em> 设计</p>
+      <div class="cat__meta">
+        <strong>设计 · 活动海报与人物 IP</strong>
+        <span>两组平面设计：一组活动海报，一组人物 IP 设计。</span>
+      </div>
+    </div>
+    <h3 class="works__group">活动海报设计<small><span class="nb"><span class="nb"><span class="nb">三张</span></span></span>校级活动海报 · 学生处学生心理发展指导中心</small></h3>
+    <div class="works works--grid3">
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design05.jpg" data-cap="竖版活动海报「心晴嘉年华」：蓝天白云与彩色气球，下方是草地野餐插画，画面中上部排布「悦纳自我 绽放青春」、对象、时间与地点" data-note="">
+                <img src="assets/design05_t.jpg" alt="竖版活动海报：蓝天白云与彩色气球，下方是草地野餐插画，画面中上部排布活动标题、对象、时间与地点" width="556" height="780" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">活动海报<span class="nb">「心晴嘉年华」</span>（5·25 心理文化节游园会）</figcaption>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design06.jpg" data-cap="竖版活动海报：淡蓝雪景与红梅枝头，底部是三维雪村场景，左下角带二维码，文字为竖排" data-note="">
+                <img src="assets/design06_t.jpg" alt="竖版活动海报：淡蓝雪景与红梅枝头，底部是三维雪村场景，左下角带二维码，文字为竖排" width="585" height="780" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">活动海报「冬日心晴 结伴同行」（密室逃脱）</figcaption>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design07.jpg" data-cap="竖版活动海报「期末压力释放 暖冬伴你同行」：分栏罗列活动信息，含知识长廊、静室与密室三个环节的说明与地点" data-note="">
+                <img src="assets/design07_t.jpg" alt="竖版活动海报：分栏罗列活动信息，含知识长廊、静室与密室三个环节的说明与地点" width="531" height="780" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">活动海报<span class="nb">「期末压力释放」</span>（考前减压活动信息）</figcaption>
+            </figure>
+    </div>
+    <div class="works__note">
+      <p class="w__note"><b>说明｜</b>围绕校园活动和心理文化活动设计海报。</p>
+      <p class="w__note"><b>可教｜</b>掌握活动海报和校园宣传物料的设计能力。</p>
+    </div>
+
+    <h3 class="works__group">人物 IP 设计——达达<small>游戏角色设定 · 达斡尔族服饰参考与配色方案 · <span class="nb">国家级大创项目成果</span></small></h3>
+    <div class="works--grid2">
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design08.jpg" data-cap="游戏人物设定版面：左侧标题与说明，中间是达斡尔族服饰的参考照片与标注，右侧是主角「达达」立绘、人物比例图与延伸表情" data-note="">
+                <img src="assets/design08_t.jpg" alt="游戏人物设定版面：左侧标题与说明，中间是达斡尔族服饰的参考照片与标注，右侧是主角「达达」立绘、人物比例图与延伸表情" width="780" height="383" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">游戏人物设计<span class="nb">「达达」</span>设定表（达斡尔族服饰参考）</figcaption>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design09.jpg" data-cap="游戏人物设定版面：三行两列陈列多组角色立绘，含皇帝、富人、牧人、裁缝、木匠、老夫妇与动物，每组下方有一排配色圆点" data-note="">
+                <img src="assets/design09_t.jpg" alt="游戏人物设定版面：三行两列陈列多组角色立绘，含皇帝、富人、牧人、裁缝、木匠、老夫妇与动物，每组下方有一排配色圆点" width="780" height="381" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">游戏人物设计<span class="nb">「哈尼卡」</span>故事人物与配色方案</figcaption>
+            </figure>
+    </div>
+    <div class="works__note">
+      <p class="w__note"><b>说明｜</b>参考达斡尔族现实人物的服饰、头饰<span class="nb">纹样</span>进行设计，本人负责角色正稿、比例图、表情和配色设定，推动达斡尔族非遗文化进入大众视野，把少数民族文化用现代设计语言表达出来。</p>
+      <p class="w__note"><b>可教｜</b>人物IP设计和校园文创设计相关课程。</p>
+    </div>
+  </section>
+
+  <section class="cat" id="c11">
+    <div class="cat__head">
+      <p class="cat__mark"><em>伍</em> 动画</p>
+      <div class="cat__meta">
+        <strong>两部短片 · 分镜、<span class="nb">绘制与合成</span></strong>
+        <span>两部动画从分镜、绘制到合成都是自己做的。</span>
+      </div>
+    </div>
+    <h3 class="works__group">动画《忆东师早期建校史，岁月峥嵘不改鲜红底色》<small>作品时长 2 分 3 秒</small></h3>
+    <div class="works works--2">
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design01.jpg" data-video="" data-cap="版画／木刻风格主题插画：放射状光芒下的一栋成排竖窗的校舍，山丘以白色波浪线表现云气，前景是逆光行走的人群剪影" data-note="">
+                <img src="assets/design01_t.jpg" alt="版画／木刻风格主题插画：放射状光芒下的一栋成排竖窗的校舍，山丘以白色波浪线表现云气，前景是逆光行走的人群剪影" width="780" height="487" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design02.jpg" data-video="" data-cap="深色颗粒肌理背景上的大屏幕／展板：板面分为黑底星群与米白版面两半，下方是一排带白色描边的红色人背影剪影" data-note="">
+                <img src="assets/design02_t.jpg" alt="深色颗粒肌理背景上的大屏幕／展板：板面分为黑底星群与米白版面两半，下方是一排带白色描边的红色人背影剪影" width="780" height="551" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design03.jpg" data-video="" data-cap="版画风格插画：穿西装打领带的男子在讲台后演讲，台上有两支话筒，身后是红色的人群剪影组成的人海，前景长桌有红色斜排线" data-note="">
+                <img src="assets/design03_t.jpg" alt="版画风格插画：穿西装打领带的男子在讲台后演讲，台上有两支话筒，身后是红色的人群剪影组成的人海，前景长桌有红色斜排线" width="780" height="551" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/design04.jpg" data-video="" data-cap="版画风格插画：左侧男性伏案书写，中部一张写着「战火中诞生的东北大学」的白纸，下方红色绶带与星形纹样，右上是青顶白墙的建筑群" data-note="">
+                <img src="assets/design04_t.jpg" alt="版画风格插画：左侧男性伏案书写，中部一张写着「战火中诞生的东北大学」的白纸，下方红色绶带与星形纹样，右上是青顶白墙的建筑群" width="780" height="498" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+            </figure>
+    </div>
+
+
+    <h3 class="works__group">动画《假如我是一片树叶》<small>毕业动画创作 · 2023 年 5 月</small></h3>
+    <div class="works works--2">
+      <figure class="w">
+              <button class="w__btn" type="button" data-video="" data-src="assets/img75.jpg" data-cap="扁平插画（含文字排版）：砖红与米白色块构成的叶形画面上，中部偏下是白色手写标题「假如我是一片树叶」，右下角小字「毕业动画创作 2023.05」" data-note="">
+                <img src="assets/img75_t.jpg" alt="扁平插画，砖红与米白色块构成叶形画面，画面含白色手写标题「假如我是一片树叶」" width="780" height="369" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-video="" data-src="assets/img76.jpg" data-cap="彩色水下主题插画：蓝底水波纹前，一张少女的脸被左右两条鱼（黄绿与粉红）夹在中间，鱼身用粗描边与平涂色块装饰" data-note="">
+                <img src="assets/img76_t.jpg" alt="彩色水下主题插画，蓝底水波纹前少女的脸被左右两条鱼夹在中间" width="780" height="439" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+            </figure>
+    </div>
+  </section>
+
+  <section class="cat" id="c9">
+    <div class="cat__head">
+      <p class="cat__mark"><em>陆</em> 民间美术</p>
+      <div class="cat__meta">
+        <strong>民间美术 · 年节与戏曲图像</strong>
+        <span>丙烯马克笔画出的团花与戏曲人物，直接对应教材里的民间美术与年文化内容。</span>
+      </div>
+    </div>
+    <div class="works works--grid2 works--justify" data-rowh="300">
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img59.jpg" data-cap="两幅并置的彩色圆形民俗装饰图案，中心以红、蓝、金色为主，周围是对称纹样与节庆细节" data-note="说明｜借鉴绵竹年画的圆形构图，以金狮、黑象、人物和装饰纹样，寓意「加官晋爵」「状元及第」，是对传统题材的当代表达。可教｜中国民间美术课程的设计内容。">
+          <img src="assets/img59_t.jpg" alt="两幅并置的彩色圆形民俗装饰图案，中心以红蓝金色为主，周围是对称纹样" width="780" height="390" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《和合双瑞迎新图》<small>作品尺寸 <span class="nb">52×52 厘米</span>（1 张）</small></figcaption>
+        <p class="w__note"><b>说明｜</b>借鉴绵竹年画的圆形构图，以金狮、黑象、人物和装饰纹样，寓意<span class="nb">「加官晋爵」</span><span class="nb">「状元及第」</span>，是对传统题材的当代表达。</p>
+        <p class="w__note"><b>可教｜</b>中国民间美术课程的设计内容。</p>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/mk01.jpg" data-cap="丙烯马克笔双人画：左边是穿宝蓝靠衣、举鞭持枪的戏曲武将卡通熊，右边是穿橙红靠衣、同样亮相的卡通猴，两人姿态互为镜像，背景是浅蓝与浅粉的印花底纹" data-note="说明｜以传统门神的站姿、服饰、兵器和纹样造型结合现代卡通人物，引起学生的兴趣，可教｜传统图像再设计或校园节庆装饰的案例。">
+          <img src="assets/mk01_t.jpg" alt="丙烯马克笔戏曲人物双人：左侧蓝色武将卡通熊与右侧橙红武将卡通猴并置亮相" width="780" height="563" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《奇趣门神》<small>作品尺寸 <span class="nb">75×52 厘米</span>（1 张）</small></figcaption>
+        <p class="w__note"><b>说明｜</b>以传统门神的站姿、服饰、兵器和纹样造型结合现代卡通人物，引起学生的兴趣，</p>
+        <p class="w__note"><b>可教｜</b>传统图像再设计或校园节庆装饰的案例。</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 视频链接：给需要挂动画视频的作品按钮加上 data-video 属性并填入视频地址，放大视图里就会出现「观看动画视频」入口 -->
+  <section class="cat" id="c3">
+    <div class="cat__head">
+      <p class="cat__mark"><em>柒</em> 剪纸</p>
+      <div class="cat__meta">
+        <strong>剪纸 · 从民俗纹样到当代叶雕</strong>
+        <span>本门类包含叶雕系列，是我个人面貌最强的一组作品，也是最容易在中学课堂上出效果的一课。</span>
+      </div>
+    </div>
+    <div class="works works--grid4 works--justify" data-rowh="330">
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img36.jpg" data-cap="红色剪纸：树形结构中嵌入人物、动物、鸟、太阳与花卉，形成「生命树」式中心构图" data-note="说明｜萨满主题剪纸作品，融入东北嬷嬷人、动物、鸟类与花卉等形象，运用镂空、穿插、疏密对比和正负形转换的造型方式。可教｜剪纸基础课中线条连接、正负形关系及画面构成的示范。">
+          <img src="assets/img36_t.jpg" alt="红色剪纸，树形结构中嵌入人物、动物、鸟、太阳与花卉，形成生命树式构图" width="685" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《生命树》<small>作品尺寸 <span class="nb">20×20 厘米</span></small></figcaption>
+        <p class="w__note"><b>说明｜</b>萨满主题剪纸作品，融入东北嬷嬷人、动物、鸟类与花卉等形象，运用镂空、穿插、疏密对比和正负形转换的造型方式。</p>
+        <p class="w__note"><b>可教｜</b>剪纸基础课中线条连接、正负形关系及画面构成的示范。</p>
+      </figure>
+      <figure class="w" data-rowstart>
+        <button class="w__btn" type="button" data-src="assets/img37.jpg" data-cap="绿色叶片剪纸装置：叶面反复印有 LOVE 字样，内部镂空组成脸部、人物与装饰图案" data-note="">
+          <img src="assets/img37_t.jpg" alt="绿色叶片剪纸装置，叶面反复印有 LOVE 字样，内部镂空组成脸部与人物图案" width="573" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《抗疫系列1》<small>作品尺寸 <span class="nb">10×15 厘米</span></small></figcaption>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img40.jpg" data-cap="大幅叶片剪纸，内部呈对称的脸部或人物形象，周围结合鸟、植物与装饰纹样" data-note="">
+          <img src="assets/img40_t.jpg" alt="大幅叶片剪纸，内部呈对称的脸部形象，周围结合鸟与植物纹样" width="780" height="760" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《抗疫系列2》<small>作品尺寸 <span class="nb">10×10 厘米</span></small></figcaption>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img41.jpg" data-cap="绿色叶片剪纸，叶内安排三个带面具或民俗特征的简化人物，以镂空轮廓与深浅层次呈现" data-note="">
+          <img src="assets/img41_t.jpg" alt="绿色叶片剪纸，叶内安排三个带面具特征的简化人物" width="605" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《抗疫系列3》<small>作品尺寸 <span class="nb">10×15 厘米</span></small></figcaption>
+      </figure>
+          </div>
+    <div class="works__note">
+      <p class="w__note"><b>说明｜</b>以抗疫为主题，顺应叶子的造型设计安排人物、花卉与枝叶形象，利用叶片的颜色、形状和自然肌理进行创作。</p>
+      <p class="w__note"><b>可教｜</b>美术自然笔记的课程设计和剪刻线条练习。</p>
+    </div>
+  </section>
+
+  <section class="cat" id="c2">
+    <div class="cat__head">
+      <p class="cat__mark"><em>捌</em> 书法</p>
+      <div class="cat__meta">
+        <strong>书法 · 篆隶基础与题款</strong>
+        <span>从篆书线条的等粗圆转，到竖幅作品的章法与落款，<span class="nb">都能示范给学生看。</span></span>
+      </div>
+    </div>
+    <div class="works works--2">
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img34.jpg" data-cap="横向书写练习页，分行排列多组篆书或古文字形态，左侧带小型落款" data-note="说明｜系统呈现篆书《说文部目》部首，体现了篆书的字形结构、用笔。可教｜书法课中汉字结构与章法的示范。">
+          <img src="assets/img34_t.jpg" alt="横向书写练习页，分行排列多组篆书或古文字形态，左侧带小型落款" width="780" height="352" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">篆书《说文部目》<small>作品尺寸 <span class="nb">152×70 厘米</span></small></figcaption>
+        <p class="w__note"><b>说明｜</b>系统呈现<span class="nb">篆书</span>《说文部目》部首，体现了<span class="nb">篆书</span>的字形结构、用笔。</p>
+        <p class="w__note"><b>可教｜</b>书法课中汉字结构与章法的示范。</p>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img35.jpg" data-cap="白纸上的竖幅黑色汉字书法，笔画有力，左侧一列较小题款或签名" data-note="说明｜以「诚信赢天下」为主题的篆书。可教｜主题书法创作或班级文化布置的示范。">
+          <img src="assets/img35_t.jpg" alt="白纸上的竖幅黑色汉字书法作品，笔画有力，左侧有一列较小题款" width="366" height="577" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《诚信赢天下》<small>作品尺寸 <span class="nb">76×48 厘米</span></small></figcaption>
+        <p class="w__note"><b>说明｜</b>以<span class="nb">「诚信赢天下」</span>为主题的篆书。</p>
+        <p class="w__note"><b>可教｜</b>主题书法创作或班级文化布置的示范。</p>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cat" id="c7">
+    <div class="cat__head">
+      <p class="cat__mark"><em>玖</em> 综合材料</p>
+      <div class="cat__meta">
+        <strong>综合材料与灯具 · 触觉经验</strong>
+      </div>
+    </div>
+    <div class="works works--grid2">
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/img56.jpg" data-cap="方形综合材料作品：淡紫背景、深色底座与粉彩色圆润形体及蘑菇状元素，具立体手工质感" data-note="说明｜运用羊毛毡制作不同大小和颜色的蘑菇，再通过高低、疏密组合成立体群落。可教｜手工创作羊毛毡和自然观察的教授。">
+                <img src="assets/img56_t.jpg" alt="方形综合材料作品，淡紫背景与粉彩色圆润形体及蘑菇状元素" width="780" height="585" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">《蘑菇》<small>作品尺寸 <span class="nb">20×15×8 厘米</span> · 羊毛毡</small></figcaption>
+              <p class="w__note"><b>说明｜</b>运用羊毛毡制作不同大小和颜色的蘑菇，再通过高低、疏密组合成立体群落。</p>
+              <p class="w__note"><b>可教｜</b>手工创作羊毛毡和自然观察的教授。</p>
+            </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/lamp01.jpg" data-cap="手工灯具实物：三棱锥灯罩上半为哑光板材并开小孔，下半是三角形与四边形的镂空透光面，灯内暖光亮起" data-note="说明｜围绕日常灯具和室内使用情境开展设计，通过对三角形的排列组合形成灯具的几何镂空与透光效果，可教｜「设计·应用」课程中灯具设计课程的新授。">
+          <img src="assets/lamp01_t.jpg" alt="手工灯具：三角锥形灯罩，下半部几何镂空透出暖橙色光，暗环境中拍下的实物" width="780" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">灯具设计<small>作品尺寸 <span class="nb">40×40×60 厘米</span></small></figcaption>
+        <p class="w__note"><b>说明｜</b>围绕日常灯具和室内使用情境开展设计，通过对三角形的排列组合形成灯具的几何镂空与透光效果，</p>
+        <p class="w__note"><b>可教｜</b><span class="nb">「设计·应用」</span>课程中灯具设计课程的新授。</p>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cat" id="c4">
+    <div class="cat__head">
+      <p class="cat__mark"><em>拾</em> 国画</p>
+      <div class="cat__meta">
+        <strong>国画 · 山水与人物写生</strong>
+      </div>
+    </div>
+    <div class="works works--grid4 works--justify" data-rowh="410">
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img43.jpg" data-cap="铅笔或淡色素描人物习作：穿外套与长裤的人物坐姿，线条轻柔，保留结构推敲痕迹" data-note="说明｜坐姿人物写生，运用「铁线描」与「游丝描」表现人体的比例关系与线条的轻重虚实疏密。可教｜人物造型课中比例观察与线描训练">
+          <img src="assets/img43_t.jpg" alt="铅笔或淡色素描人物习作，穿外套与长裤的人物坐姿，线条轻柔" width="586" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">工笔人物写生<small>作品尺寸 <span class="nb">69×45 厘米</span></small></figcaption>
+        <p class="w__note"><b>说明｜</b>坐姿人物写生，运用<span class="nb">「铁线描」</span>与<span class="nb">「游丝描」</span>表现人体的比例关系与线条的轻重虚实疏密。</p>
+        <p class="w__note"><b>可教｜</b>人物造型课中<span class="nb">比例观察与线描训练</span></p>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/gh02.jpg" data-cap="竖幅水墨山水：上部是淡墨主峰与远山，中段大片留白作水面，近景几株枯树以浓墨点叶，全幅只有墨色的浓淡干湿" data-note="说明｜以远山、水面、树木和近景坡岸构成山水小景，近景枝干与远处水面形成疏密对比。可教｜中国画山水课课中笔墨节奏的示范。">
+          <img src="assets/gh02_t.jpg" alt="竖幅水墨山水，淡墨主峰与远山、留白水面，近景枯树浓墨点叶" width="409" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">写意水墨山水<small>作品尺寸 <span class="nb">86×45 厘米</span></small></figcaption>
+        <p class="w__note"><b>说明｜</b>以远山、水面、树木和近景坡岸构成山水小景，近景枝干与远处水面形成疏密对比。</p>
+        <p class="w__note"><b>可教｜</b>中国画山水课课中笔墨节奏的示范。</p>
+      </figure>
+      <figure class="w" data-rowstart>
+        <button class="w__btn" type="button" data-src="assets/gh03.jpg" data-cap="水墨设色山水：依山而建的白墙黑瓦民居层层叠叠，屋瓦以密线勾出，山石用浓墨加飞白，树丛与坡地施淡绿" data-note="">
+          <img src="assets/gh03_t.jpg" alt="水墨设色山水，白墙黑瓦的山村民居与淡绿树丛" width="571" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">写意山水写生<span class="nb">「山村民居」</span><small>作品尺寸 <span class="nb">61.5×45 厘米</span></small></figcaption>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/gh01.jpg" data-cap="水墨写意瓶花：紫褐色圆罐中抽出掌状大叶，淡墨勾出放射状叶脉，左侧有淡紫花穗，画面散布红、蓝、绿三色小点" data-note="">
+          <img src="assets/gh01_t.jpg" alt="水墨写意瓶花，圆罐中抽出掌状大叶，画面散布彩色小点" width="573" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">写意山水写生<span class="nb">「瓶花」</span><small>作品尺寸 <span class="nb">61.5×45 厘米</span></small></figcaption>
+      </figure>
+    </div>
+    <div class="works__note">
+      <p class="w__note"><b>说明｜</b>风景写生，均绘制于安徽黟县宏村，用笔墨概括成皴擦、点染，保留南方乡村的生活气息，体现出国画的笔墨意趣，</p>
+      <p class="w__note"><b>可教｜</b>中国画创作课中实景转化为写生的方法。</p>
+    </div>
+  </section>
+
+  <section class="cat" id="c5">
+    <div class="cat__head">
+      <p class="cat__mark"><em>拾壹</em> 版画</p>
+      <div class="cat__meta">
+        <strong>版画 · 木刻与铜版画</strong>
+      </div>
+    </div>
+    <h3 class="works__group">木刻版画</h3>
+    <div class="works works--grid2">
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/img50.jpg" data-cap="木刻版画：多个人物在花朵与器物之间形成动态姿态，构图节奏强；画心下沿有铅笔题名《丰收》、版次 4/8 与署名" data-note="">
+                <img src="assets/img50_t.jpg" alt="木刻版画，多个人物在花朵与器物之间形成动态姿态，构图节奏强" width="780" height="572" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">木刻版画<span class="nb">「丰收」</span><small>作品尺寸 <span class="nb">46×34 厘米</span></small></figcaption>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/img51.jpg" data-cap="木刻版画：密集的城市建筑、街道与阳台组成纵深空间；画心下沿有铅笔题名《城市》、版次 9/10 与署名" data-note="">
+                <img src="assets/img51_t.jpg" alt="黑白木刻版画，密集的城市建筑、街道与阳台组成纵深空间" width="558" height="780" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">木刻版画<span class="nb">「城市」</span><small>作品尺寸 <span class="nb">52×39 厘米</span></small></figcaption>
+            </figure>
+    </div>
+    <div class="works__note">
+      <p class="w__note"><b>说明｜</b>通过动态人物、传统文化、建筑等不同题材的创作，</p>
+      <p class="w__note"><b>可教｜</b>木版画的制作过程、人物动态刻画与群像构图、版画与传统文化结合、建筑透视与形态概括等知识点</p>
+    </div>
+
+    <h3 class="works__group">铜版画</h3>
+    <div class="works works--grid3">
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/img47.jpg" data-cap="铜版画（蚀刻）：骨骼形象乘船或海兽穿行水面；画心下沿有铅笔题名《当代之泉》、版次 2/5 与署名" data-note="">
+                <img src="assets/img47_t.jpg" alt="铜版画蚀刻，骨骼形象乘船穿行水面，底部有版次、签名与年份" width="726" height="780" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">铜版画<span class="nb">「当代之泉」</span><small>作品尺寸 <span class="nb">24×24 厘米</span></small></figcaption>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/img48.jpg" data-cap="铜版画：装饰性帆船在波浪中航行，船体与海面用密集线条表现；画心下沿有铅笔题名《太阳船》、版次 2/3 与署名" data-note="">
+                <img src="assets/img48_t.jpg" alt="铜版画，装饰性帆船在波浪中航行，船体与海面以密集线条表现" width="749" height="780" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">铜版画<span class="nb">「太阳船」</span><small>作品尺寸 <span class="nb">24×24 厘米</span></small></figcaption>
+            </figure>
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/img49.jpg" data-cap="铜版画：中央为长袍人物或女性形象，背后展开大翅膀并置于圆拱框景中；画心下沿有英文铅笔题名《The Sleeping God》、版次 3/5 与署名" data-note="">
+                <img src="assets/img49_t.jpg" alt="铜版画，中央是长袍人物，背后展开大翅膀并置于圆拱框景中" width="754" height="780" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">铜版画<span class="nb">「The Sleeping God」</span><small>作品尺寸 <span class="nb">24×24 厘米</span></small></figcaption>
+            </figure>
+    </div>
+    <div class="works__note">
+      <p class="w__note"><b>说明｜</b>使用线刻的方向、深浅处理画面中的画面层次与黑白对比。</p>
+      <p class="w__note"><b>可教｜</b>铜版画创作步骤、版画线刻、线条疏密和黑白关系的示范。</p>
+    </div>
+  </section>
+
+  <section class="cat" id="c12">
+    <div class="cat__head">
+      <p class="cat__mark"><em>拾贰</em> 素描</p>
+      <div class="cat__meta">
+        <strong>素描 · 观察与表现</strong>
+        <span>铅笔与炭笔的人物与肖像作业，<span class="nb">可作写生课的步骤示范。</span></span>
+      </div>
+    </div>
+    <div class="works">
+            <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img72.jpg" data-cap="炭笔或石墨肖像习作：穿格纹衬衫的中年男性坐姿，明暗关系与面部结构刻画清楚" data-note="">
+          <img src="assets/img72_t.jpg" alt="炭笔或石墨肖像习作，穿格纹衬衫的中年男性坐姿" width="586" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">人物半身像<small>作品尺寸 <span class="nb">75×52 厘米</span></small></figcaption>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img73.jpg" data-cap="炭笔或石墨人物肖像：年长男性坐着并双手交握，衣褶、手部与面部光影得到重点表现" data-note="">
+          <img src="assets/img73_t.jpg" alt="炭笔或石墨人物肖像，年长男性坐着并双手交握，衣褶与手部光影重点表现" width="463" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">人物全身像<small>作品尺寸 <span class="nb">105×75 厘米</span></small></figcaption>
+      </figure>
+    </div>
+    <div class="works__note">
+      <p class="w__note"><b>可教｜</b>素描人物造型课程</p>
+    </div>
+  </section>
+
+<section class="cat" id="c8">
+    <div class="cat__head">
+      <p class="cat__mark"><em>拾叁</em> 水彩</p>
+    </div>
+    <div class="works works--grid2">
+      <figure class="w">
+              <button class="w__btn" type="button" data-src="assets/img57.jpg" data-cap="水彩速写页：四格静物写生，格内分别是条纹罐里的仙人掌、玻璃瓶中的粉色瓶花、粉陶盆里的紫色小花与白盆幼苗，色调柔和" data-note="说明｜以不同生长中的植物为观察对象，将其组合在一张作品中。可教｜美术自然笔记中植物观察和连续记录的表现方式。">
+                <img src="assets/img57_t.jpg" alt="水彩速写页，分成四格，分别描绘罐中仙人掌、瓶中粉色瓶花、盆中紫花与白盆幼苗" width="780" height="553" loading="lazy" decoding="async">
+                <span class="w__zoom" aria-hidden="true">点击放大</span>
+              </button>
+              <figcaption class="w__cap">《花·生》<small>作品尺寸 <span class="nb">76×54 厘米</span></small></figcaption>
+              <p class="w__note"><b>说明｜</b>以不同生长中的植物为观察对象，将其组合在一张作品中。</p>
+              <p class="w__note"><b>可教｜</b>美术自然笔记中植物观察和连续记录的表现方式。</p>
+            </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/lotus01.jpg" data-cap="纸本水彩荷塘写生：粉色荷花居中偏右，荷叶以深绿、青绿与蓝紫湿接晕染，叶面点出白色水珠" data-note="说明｜利用不同的晕染和边缘变化手法表现荷花、荷叶与水珠的不同质感。可教｜水彩绘画。">
+          <img src="assets/lotus01_t.jpg" alt="水彩作品：荷塘中一朵盛开的粉色荷花，四周是深绿到蓝紫的荷叶，叶上有白色水珠点" width="585" height="780" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《荷塘写生》<small>作品尺寸 <span class="nb">38×53 厘米</span></small></figcaption>
+        <p class="w__note"><b>说明｜</b>利用不同的晕染和边缘变化手法表现荷花、荷叶与水珠的不同质感。</p>
+        <p class="w__note"><b>可教｜</b>水彩绘画。</p>
+      </figure>
+    </div>
+  </section>
+
+  <section class="cat" id="c6">
+    <div class="cat__head">
+      <p class="cat__mark"><em>拾肆</em> 油画</p>
+    </div>
+    <div class="works works--2">
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img53.jpg" data-cap="布面油画：红色背景中一个儿童或宇航员般的人物拥抱骷髅形象，带幻想与叙事意味" data-note="说明｜以新年为背景的主题创作，可教｜节庆主题绘画的参考案例。">
+          <img src="assets/img53_t.jpg" alt="彩色画布作品，红色背景中一个儿童般的人物拥抱骷髅形象" width="780" height="770" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《二零二五》<small>作品尺寸 <span class="nb">40×40 厘米</span></small></figcaption>
+        <p class="w__note"><b>说明｜</b>以新年为背景的主题创作，</p>
+        <p class="w__note"><b>可教｜</b>节庆主题绘画的参考案例。</p>
+      </figure>
+      <figure class="w">
+        <button class="w__btn" type="button" data-src="assets/img54.jpg" data-cap="十二幅小方画组成的网格作品，包含动物、人物与符号等多样形象，色彩明亮" data-note="说明｜以人物表情、姿态、动物形象和色彩变化作为情绪观察线索，通过十二个画面表达不同情绪。可教｜艺术疗愈情绪表达的课程设计。">
+          <img src="assets/img54_t.jpg" alt="十二幅小方画组成的网格作品，包含动物、人物与符号形象，色彩明亮" width="780" height="559" loading="lazy" decoding="async">
+          <span class="w__zoom" aria-hidden="true">点击放大</span>
+        </button>
+        <figcaption class="w__cap">《情绪》组画<small>作品尺寸 单幅 <span class="nb">20×20 厘米</span>，共 12 幅</small></figcaption>
+        <p class="w__note"><b>说明｜</b>以人物表情、姿态、动物形象和色彩变化作为情绪观察线索，通过十二个画面表达不同情绪。</p>
+        <p class="w__note"><b>可教｜</b>艺术疗愈情绪表达的课程设计。</p>
+      </figure>
+    </div>
+  </section>
+
   <section class="cat" id="practice">
     <div class="cat__head">
-      <p class="cat__mark"><em>实践</em> 个人实践</p>
+      <p class="cat__mark"><em>拾伍</em> 个人实践</p>
       <div class="cat__meta">
         <strong>讲台与活动现场</strong>
         <span>具备中小学一线教学、说课及活动组织经验，累计授课<span class="nb">2000 余课时</span>，教学对象覆盖<span class="nb">小学一年级</span>至<span class="nb">高中三年级</span>。</span>
@@ -344,513 +732,16 @@
     </div>
   </section>
 
-  <section class="cat" id="c2">
-    <div class="cat__head">
-      <p class="cat__mark"><em>贰</em> 书法</p>
-      <div class="cat__meta">
-        <strong>书法 · 篆隶基础与题款</strong>
-        <span>从篆书线条的等粗圆转，到竖幅作品的章法与落款，<span class="nb">都能示范给学生看。</span></span>
-      </div>
-    </div>
-    <div class="works works--2">
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img34.jpg" data-cap="横向书写练习页，分行排列多组篆书或古文字形态，左侧带小型落款" data-note="说明｜系统呈现篆书《说文部目》部首，体现了篆书的字形结构、用笔。可教｜书法课中汉字结构与章法的示范。">
-          <img src="assets/img34_t.jpg" alt="横向书写练习页，分行排列多组篆书或古文字形态，左侧带小型落款" width="780" height="352" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">篆书《说文部目》<small>作品尺寸 <span class="nb">152×70 厘米</span></small></figcaption>
-        <p class="w__note"><b>说明｜</b>系统呈现<span class="nb">篆书</span>《说文部目》部首，体现了<span class="nb">篆书</span>的字形结构、用笔。</p>
-        <p class="w__note"><b>可教｜</b>书法课中汉字结构与章法的示范。</p>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img35.jpg" data-cap="白纸上的竖幅黑色汉字书法，笔画有力，左侧一列较小题款或签名" data-note="说明｜以「诚信赢天下」为主题的篆书。可教｜主题书法创作或班级文化布置的示范。">
-          <img src="assets/img35_t.jpg" alt="白纸上的竖幅黑色汉字书法作品，笔画有力，左侧有一列较小题款" width="366" height="577" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《诚信赢天下》<small>作品尺寸 <span class="nb">76×48 厘米</span></small></figcaption>
-        <p class="w__note"><b>说明｜</b>以<span class="nb">「诚信赢天下」</span>为主题的篆书。</p>
-        <p class="w__note"><b>可教｜</b>主题书法创作或班级文化布置的示范。</p>
-      </figure>
-    </div>
-  </section>
-
-  <section class="cat" id="c3">
-    <div class="cat__head">
-      <p class="cat__mark"><em>叁</em> 剪纸</p>
-      <div class="cat__meta">
-        <strong>剪纸 · 从民俗纹样到当代叶雕</strong>
-        <span>本门类包含叶雕系列，是我个人面貌最强的一组作品，也是最容易在中学课堂上出效果的一课。</span>
-      </div>
-    </div>
-    <div class="works works--grid4 works--justify" data-rowh="330">
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img36.jpg" data-cap="红色剪纸：树形结构中嵌入人物、动物、鸟、太阳与花卉，形成「生命树」式中心构图" data-note="说明｜萨满主题剪纸作品，融入东北嬷嬷人、动物、鸟类与花卉等形象，运用镂空、穿插、疏密对比和正负形转换的造型方式。可教｜剪纸基础课中线条连接、正负形关系及画面构成的示范。">
-          <img src="assets/img36_t.jpg" alt="红色剪纸，树形结构中嵌入人物、动物、鸟、太阳与花卉，形成生命树式构图" width="685" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《生命树》<small>作品尺寸 <span class="nb">20×20 厘米</span></small></figcaption>
-        <p class="w__note"><b>说明｜</b>萨满主题剪纸作品，融入东北嬷嬷人、动物、鸟类与花卉等形象，运用镂空、穿插、疏密对比和正负形转换的造型方式。</p>
-        <p class="w__note"><b>可教｜</b>剪纸基础课中线条连接、正负形关系及画面构成的示范。</p>
-      </figure>
-      <figure class="w" data-rowstart>
-        <button class="w__btn" type="button" data-src="assets/img37.jpg" data-cap="绿色叶片剪纸装置：叶面反复印有 LOVE 字样，内部镂空组成脸部、人物与装饰图案" data-note="">
-          <img src="assets/img37_t.jpg" alt="绿色叶片剪纸装置，叶面反复印有 LOVE 字样，内部镂空组成脸部与人物图案" width="573" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《抗疫系列1》<small>作品尺寸 <span class="nb">10×15 厘米</span></small></figcaption>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img40.jpg" data-cap="大幅叶片剪纸，内部呈对称的脸部或人物形象，周围结合鸟、植物与装饰纹样" data-note="">
-          <img src="assets/img40_t.jpg" alt="大幅叶片剪纸，内部呈对称的脸部形象，周围结合鸟与植物纹样" width="780" height="760" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《抗疫系列2》<small>作品尺寸 <span class="nb">10×10 厘米</span></small></figcaption>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img41.jpg" data-cap="绿色叶片剪纸，叶内安排三个带面具或民俗特征的简化人物，以镂空轮廓与深浅层次呈现" data-note="">
-          <img src="assets/img41_t.jpg" alt="绿色叶片剪纸，叶内安排三个带面具特征的简化人物" width="605" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《抗疫系列3》<small>作品尺寸 <span class="nb">10×15 厘米</span></small></figcaption>
-      </figure>
-          </div>
-    <div class="works__note">
-      <p class="w__note"><b>说明｜</b>以抗疫为主题，顺应叶子的造型设计安排人物、花卉与枝叶形象，利用叶片的颜色、形状和自然肌理进行创作。</p>
-      <p class="w__note"><b>可教｜</b>美术自然笔记的课程设计和剪刻线条练习。</p>
-    </div>
-  </section>
-
-  <section class="cat" id="c4">
-    <div class="cat__head">
-      <p class="cat__mark"><em>肆</em> 国画</p>
-      <div class="cat__meta">
-        <strong>国画 · 山水与人物写生</strong>
-      </div>
-    </div>
-    <div class="works works--grid4 works--justify" data-rowh="410">
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img43.jpg" data-cap="铅笔或淡色素描人物习作：穿外套与长裤的人物坐姿，线条轻柔，保留结构推敲痕迹" data-note="说明｜坐姿人物写生，运用「铁线描」与「游丝描」表现人体的比例关系与线条的轻重虚实疏密。可教｜人物造型课中比例观察与线描训练">
-          <img src="assets/img43_t.jpg" alt="铅笔或淡色素描人物习作，穿外套与长裤的人物坐姿，线条轻柔" width="586" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">工笔人物写生<small>作品尺寸 <span class="nb">69×45 厘米</span></small></figcaption>
-        <p class="w__note"><b>说明｜</b>坐姿人物写生，运用<span class="nb">「铁线描」</span>与<span class="nb">「游丝描」</span>表现人体的比例关系与线条的轻重虚实疏密。</p>
-        <p class="w__note"><b>可教｜</b>人物造型课中<span class="nb">比例观察与线描训练</span></p>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/gh02.jpg" data-cap="竖幅水墨山水：上部是淡墨主峰与远山，中段大片留白作水面，近景几株枯树以浓墨点叶，全幅只有墨色的浓淡干湿" data-note="说明｜以远山、水面、树木和近景坡岸构成山水小景，近景枝干与远处水面形成疏密对比。可教｜中国画山水课课中笔墨节奏的示范。">
-          <img src="assets/gh02_t.jpg" alt="竖幅水墨山水，淡墨主峰与远山、留白水面，近景枯树浓墨点叶" width="409" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">写意水墨山水<small>作品尺寸 <span class="nb">86×45 厘米</span></small></figcaption>
-        <p class="w__note"><b>说明｜</b>以远山、水面、树木和近景坡岸构成山水小景，近景枝干与远处水面形成疏密对比。</p>
-        <p class="w__note"><b>可教｜</b>中国画山水课课中笔墨节奏的示范。</p>
-      </figure>
-      <figure class="w" data-rowstart>
-        <button class="w__btn" type="button" data-src="assets/gh03.jpg" data-cap="水墨设色山水：依山而建的白墙黑瓦民居层层叠叠，屋瓦以密线勾出，山石用浓墨加飞白，树丛与坡地施淡绿" data-note="">
-          <img src="assets/gh03_t.jpg" alt="水墨设色山水，白墙黑瓦的山村民居与淡绿树丛" width="571" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">写意山水写生<span class="nb">「山村民居」</span><small>作品尺寸 <span class="nb">61.5×45 厘米</span></small></figcaption>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/gh01.jpg" data-cap="水墨写意瓶花：紫褐色圆罐中抽出掌状大叶，淡墨勾出放射状叶脉，左侧有淡紫花穗，画面散布红、蓝、绿三色小点" data-note="">
-          <img src="assets/gh01_t.jpg" alt="水墨写意瓶花，圆罐中抽出掌状大叶，画面散布彩色小点" width="573" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">写意山水写生<span class="nb">「瓶花」</span><small>作品尺寸 <span class="nb">61.5×45 厘米</span></small></figcaption>
-      </figure>
-    </div>
-    <div class="works__note">
-      <p class="w__note"><b>说明｜</b>风景写生，均绘制于安徽黟县宏村，用笔墨概括成皴擦、点染，保留南方乡村的生活气息，体现出国画的笔墨意趣，</p>
-      <p class="w__note"><b>可教｜</b>中国画创作课中实景转化为写生的方法。</p>
-    </div>
-  </section>
-
-  <section class="cat" id="c5">
-    <div class="cat__head">
-      <p class="cat__mark"><em>伍</em> 版画</p>
-      <div class="cat__meta">
-        <strong>版画 · 木刻与铜版画</strong>
-      </div>
-    </div>
-    <h3 class="works__group">木刻版画</h3>
-    <div class="works works--grid2">
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/img50.jpg" data-cap="木刻版画：多个人物在花朵与器物之间形成动态姿态，构图节奏强；画心下沿有铅笔题名《丰收》、版次 4/8 与署名" data-note="">
-                <img src="assets/img50_t.jpg" alt="木刻版画，多个人物在花朵与器物之间形成动态姿态，构图节奏强" width="780" height="572" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">木刻版画<span class="nb">「丰收」</span><small>作品尺寸 <span class="nb">46×34 厘米</span></small></figcaption>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/img51.jpg" data-cap="木刻版画：密集的城市建筑、街道与阳台组成纵深空间；画心下沿有铅笔题名《城市》、版次 9/10 与署名" data-note="">
-                <img src="assets/img51_t.jpg" alt="黑白木刻版画，密集的城市建筑、街道与阳台组成纵深空间" width="558" height="780" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">木刻版画<span class="nb">「城市」</span><small>作品尺寸 <span class="nb">52×39 厘米</span></small></figcaption>
-            </figure>
-    </div>
-    <div class="works__note">
-      <p class="w__note"><b>说明｜</b>通过动态人物、传统文化、建筑等不同题材的创作，</p>
-      <p class="w__note"><b>可教｜</b>木版画的制作过程、人物动态刻画与群像构图、版画与传统文化结合、建筑透视与形态概括等知识点</p>
-    </div>
-
-    <h3 class="works__group">铜版画</h3>
-    <div class="works works--grid3">
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/img47.jpg" data-cap="铜版画（蚀刻）：骨骼形象乘船或海兽穿行水面；画心下沿有铅笔题名《当代之泉》、版次 2/5 与署名" data-note="">
-                <img src="assets/img47_t.jpg" alt="铜版画蚀刻，骨骼形象乘船穿行水面，底部有版次、签名与年份" width="726" height="780" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">铜版画<span class="nb">「当代之泉」</span><small>作品尺寸 <span class="nb">24×24 厘米</span></small></figcaption>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/img48.jpg" data-cap="铜版画：装饰性帆船在波浪中航行，船体与海面用密集线条表现；画心下沿有铅笔题名《太阳船》、版次 2/3 与署名" data-note="">
-                <img src="assets/img48_t.jpg" alt="铜版画，装饰性帆船在波浪中航行，船体与海面以密集线条表现" width="749" height="780" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">铜版画<span class="nb">「太阳船」</span><small>作品尺寸 <span class="nb">24×24 厘米</span></small></figcaption>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/img49.jpg" data-cap="铜版画：中央为长袍人物或女性形象，背后展开大翅膀并置于圆拱框景中；画心下沿有英文铅笔题名《The Sleeping God》、版次 3/5 与署名" data-note="">
-                <img src="assets/img49_t.jpg" alt="铜版画，中央是长袍人物，背后展开大翅膀并置于圆拱框景中" width="754" height="780" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">铜版画<span class="nb">「The Sleeping God」</span><small>作品尺寸 <span class="nb">24×24 厘米</span></small></figcaption>
-            </figure>
-    </div>
-    <div class="works__note">
-      <p class="w__note"><b>说明｜</b>使用线刻的方向、深浅处理画面中的画面层次与黑白对比。</p>
-      <p class="w__note"><b>可教｜</b>铜版画创作步骤、版画线刻、线条疏密和黑白关系的示范。</p>
-    </div>
-  </section>
-
-  <section class="cat" id="c6">
-    <div class="cat__head">
-      <p class="cat__mark"><em>陆</em> 油画</p>
-    </div>
-    <div class="works works--2">
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img53.jpg" data-cap="布面油画：红色背景中一个儿童或宇航员般的人物拥抱骷髅形象，带幻想与叙事意味" data-note="说明｜以新年为背景的主题创作，可教｜节庆主题绘画的参考案例。">
-          <img src="assets/img53_t.jpg" alt="彩色画布作品，红色背景中一个儿童般的人物拥抱骷髅形象" width="780" height="770" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《二零二五》<small>作品尺寸 <span class="nb">40×40 厘米</span></small></figcaption>
-        <p class="w__note"><b>说明｜</b>以新年为背景的主题创作，</p>
-        <p class="w__note"><b>可教｜</b>节庆主题绘画的参考案例。</p>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img54.jpg" data-cap="十二幅小方画组成的网格作品，包含动物、人物与符号等多样形象，色彩明亮" data-note="说明｜以人物表情、姿态、动物形象和色彩变化作为情绪观察线索，通过十二个画面表达不同情绪。可教｜艺术疗愈情绪表达的课程设计。">
-          <img src="assets/img54_t.jpg" alt="十二幅小方画组成的网格作品，包含动物、人物与符号形象，色彩明亮" width="780" height="559" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《情绪》组画<small>作品尺寸 单幅 <span class="nb">20×20 厘米</span>，共 12 幅</small></figcaption>
-        <p class="w__note"><b>说明｜</b>以人物表情、姿态、动物形象和色彩变化作为情绪观察线索，通过十二个画面表达不同情绪。</p>
-        <p class="w__note"><b>可教｜</b>艺术疗愈情绪表达的课程设计。</p>
-      </figure>
-    </div>
-  </section>
-
-  <section class="cat" id="c7">
-    <div class="cat__head">
-      <p class="cat__mark"><em>柒</em> 综合材料</p>
-      <div class="cat__meta">
-        <strong>综合材料与灯具 · 触觉经验</strong>
-      </div>
-    </div>
-    <div class="works works--grid2">
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/img56.jpg" data-cap="方形综合材料作品：淡紫背景、深色底座与粉彩色圆润形体及蘑菇状元素，具立体手工质感" data-note="说明｜运用羊毛毡制作不同大小和颜色的蘑菇，再通过高低、疏密组合成立体群落。可教｜手工创作羊毛毡和自然观察的教授。">
-                <img src="assets/img56_t.jpg" alt="方形综合材料作品，淡紫背景与粉彩色圆润形体及蘑菇状元素" width="780" height="585" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">《蘑菇》<small>作品尺寸 <span class="nb">20×15×8 厘米</span> · 羊毛毡</small></figcaption>
-              <p class="w__note"><b>说明｜</b>运用羊毛毡制作不同大小和颜色的蘑菇，再通过高低、疏密组合成立体群落。</p>
-              <p class="w__note"><b>可教｜</b>手工创作羊毛毡和自然观察的教授。</p>
-            </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/lamp01.jpg" data-cap="手工灯具实物：三棱锥灯罩上半为哑光板材并开小孔，下半是三角形与四边形的镂空透光面，灯内暖光亮起" data-note="说明｜围绕日常灯具和室内使用情境开展设计，通过对三角形的排列组合形成灯具的几何镂空与透光效果，可教｜「设计·应用」课程中灯具设计课程的新授。">
-          <img src="assets/lamp01_t.jpg" alt="手工灯具：三角锥形灯罩，下半部几何镂空透出暖橙色光，暗环境中拍下的实物" width="780" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">灯具设计<small>作品尺寸 <span class="nb">40×40×60 厘米</span></small></figcaption>
-        <p class="w__note"><b>说明｜</b>围绕日常灯具和室内使用情境开展设计，通过对三角形的排列组合形成灯具的几何镂空与透光效果，</p>
-        <p class="w__note"><b>可教｜</b><span class="nb">「设计·应用」</span>课程中灯具设计课程的新授。</p>
-      </figure>
-    </div>
-  </section>
-
-  <section class="cat" id="c8">
-    <div class="cat__head">
-      <p class="cat__mark"><em>捌</em> 水彩</p>
-    </div>
-    <div class="works works--grid2">
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/img57.jpg" data-cap="水彩速写页：四格静物写生，格内分别是条纹罐里的仙人掌、玻璃瓶中的粉色瓶花、粉陶盆里的紫色小花与白盆幼苗，色调柔和" data-note="说明｜以不同生长中的植物为观察对象，将其组合在一张作品中。可教｜美术自然笔记中植物观察和连续记录的表现方式。">
-                <img src="assets/img57_t.jpg" alt="水彩速写页，分成四格，分别描绘罐中仙人掌、瓶中粉色瓶花、盆中紫花与白盆幼苗" width="780" height="553" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">《花·生》<small>作品尺寸 <span class="nb">76×54 厘米</span></small></figcaption>
-              <p class="w__note"><b>说明｜</b>以不同生长中的植物为观察对象，将其组合在一张作品中。</p>
-              <p class="w__note"><b>可教｜</b>美术自然笔记中植物观察和连续记录的表现方式。</p>
-            </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/lotus01.jpg" data-cap="纸本水彩荷塘写生：粉色荷花居中偏右，荷叶以深绿、青绿与蓝紫湿接晕染，叶面点出白色水珠" data-note="说明｜利用不同的晕染和边缘变化手法表现荷花、荷叶与水珠的不同质感。可教｜水彩绘画。">
-          <img src="assets/lotus01_t.jpg" alt="水彩作品：荷塘中一朵盛开的粉色荷花，四周是深绿到蓝紫的荷叶，叶上有白色水珠点" width="585" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《荷塘写生》<small>作品尺寸 <span class="nb">38×53 厘米</span></small></figcaption>
-        <p class="w__note"><b>说明｜</b>利用不同的晕染和边缘变化手法表现荷花、荷叶与水珠的不同质感。</p>
-        <p class="w__note"><b>可教｜</b>水彩绘画。</p>
-      </figure>
-    </div>
-  </section>
-
-  <section class="cat" id="c9">
-    <div class="cat__head">
-      <p class="cat__mark"><em>玖</em> 马克笔</p>
-      <div class="cat__meta">
-        <strong>马克笔 · 年节与戏曲图像</strong>
-        <span>丙烯马克笔画出的团花与戏曲人物，直接对应教材里的民间美术与年文化内容。</span>
-      </div>
-    </div>
-    <div class="works works--grid2 works--justify" data-rowh="300">
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img59.jpg" data-cap="两幅并置的彩色圆形民俗装饰图案，中心以红、蓝、金色为主，周围是对称纹样与节庆细节" data-note="说明｜借鉴绵竹年画的圆形构图，以金狮、黑象、人物和装饰纹样，寓意「加官晋爵」「状元及第」，是对传统题材的当代表达。可教｜中国民间美术课程的设计内容。">
-          <img src="assets/img59_t.jpg" alt="两幅并置的彩色圆形民俗装饰图案，中心以红蓝金色为主，周围是对称纹样" width="780" height="390" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《和合双瑞迎新图》<small>作品尺寸 <span class="nb">52×52 厘米</span>（1 张）</small></figcaption>
-        <p class="w__note"><b>说明｜</b>借鉴绵竹年画的圆形构图，以金狮、黑象、人物和装饰纹样，寓意<span class="nb">「加官晋爵」</span><span class="nb">「状元及第」</span>，是对传统题材的当代表达。</p>
-        <p class="w__note"><b>可教｜</b>中国民间美术课程的设计内容。</p>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/mk01.jpg" data-cap="丙烯马克笔双人画：左边是穿宝蓝靠衣、举鞭持枪的戏曲武将卡通熊，右边是穿橙红靠衣、同样亮相的卡通猴，两人姿态互为镜像，背景是浅蓝与浅粉的印花底纹" data-note="说明｜以传统门神的站姿、服饰、兵器和纹样造型结合现代卡通人物，引起学生的兴趣，可教｜传统图像再设计或校园节庆装饰的案例。">
-          <img src="assets/mk01_t.jpg" alt="丙烯马克笔戏曲人物双人：左侧蓝色武将卡通熊与右侧橙红武将卡通猴并置亮相" width="780" height="563" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">《奇趣门神》<small>作品尺寸 <span class="nb">75×52 厘米</span>（1 张）</small></figcaption>
-        <p class="w__note"><b>说明｜</b>以传统门神的站姿、服饰、兵器和纹样造型结合现代卡通人物，引起学生的兴趣，</p>
-        <p class="w__note"><b>可教｜</b>传统图像再设计或校园节庆装饰的案例。</p>
-      </figure>
-    </div>
-  </section>
-
-  <!-- 视频链接：给需要挂动画视频的作品按钮加上 data-video 属性并填入视频地址，放大视图里就会出现「观看动画视频」入口 -->
-  <section class="cat" id="c10">
-    <div class="cat__head">
-      <p class="cat__mark"><em>拾</em> 设计</p>
-      <div class="cat__meta">
-        <strong>设计 · 活动海报与人物 IP</strong>
-        <span>两组平面设计：一组活动海报，一组人物 IP 设计。</span>
-      </div>
-    </div>
-    <h3 class="works__group">活动海报设计<small><span class="nb"><span class="nb"><span class="nb">三张</span></span></span>校级活动海报 · 学生处学生心理发展指导中心</small></h3>
-    <div class="works works--grid3">
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design05.jpg" data-cap="竖版活动海报「心晴嘉年华」：蓝天白云与彩色气球，下方是草地野餐插画，画面中上部排布「悦纳自我 绽放青春」、对象、时间与地点" data-note="">
-                <img src="assets/design05_t.jpg" alt="竖版活动海报：蓝天白云与彩色气球，下方是草地野餐插画，画面中上部排布活动标题、对象、时间与地点" width="556" height="780" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">活动海报<span class="nb">「心晴嘉年华」</span>（5·25 心理文化节游园会）</figcaption>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design06.jpg" data-cap="竖版活动海报：淡蓝雪景与红梅枝头，底部是三维雪村场景，左下角带二维码，文字为竖排" data-note="">
-                <img src="assets/design06_t.jpg" alt="竖版活动海报：淡蓝雪景与红梅枝头，底部是三维雪村场景，左下角带二维码，文字为竖排" width="585" height="780" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">活动海报「冬日心晴 结伴同行」（密室逃脱）</figcaption>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design07.jpg" data-cap="竖版活动海报「期末压力释放 暖冬伴你同行」：分栏罗列活动信息，含知识长廊、静室与密室三个环节的说明与地点" data-note="">
-                <img src="assets/design07_t.jpg" alt="竖版活动海报：分栏罗列活动信息，含知识长廊、静室与密室三个环节的说明与地点" width="531" height="780" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">活动海报<span class="nb">「期末压力释放」</span>（考前减压活动信息）</figcaption>
-            </figure>
-    </div>
-    <div class="works__note">
-      <p class="w__note"><b>说明｜</b>围绕校园活动和心理文化活动设计海报。</p>
-      <p class="w__note"><b>可教｜</b>掌握活动海报和校园宣传物料的设计能力。</p>
-    </div>
-
-    <h3 class="works__group">人物 IP 设计——达达<small>游戏角色设定 · 达斡尔族服饰参考与配色方案 · <span class="nb">国家级大创项目成果</span></small></h3>
-    <div class="works--grid2">
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design08.jpg" data-cap="游戏人物设定版面：左侧标题与说明，中间是达斡尔族服饰的参考照片与标注，右侧是主角「达达」立绘、人物比例图与延伸表情" data-note="">
-                <img src="assets/design08_t.jpg" alt="游戏人物设定版面：左侧标题与说明，中间是达斡尔族服饰的参考照片与标注，右侧是主角「达达」立绘、人物比例图与延伸表情" width="780" height="383" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">游戏人物设计<span class="nb">「达达」</span>设定表（达斡尔族服饰参考）</figcaption>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design09.jpg" data-cap="游戏人物设定版面：三行两列陈列多组角色立绘，含皇帝、富人、牧人、裁缝、木匠、老夫妇与动物，每组下方有一排配色圆点" data-note="">
-                <img src="assets/design09_t.jpg" alt="游戏人物设定版面：三行两列陈列多组角色立绘，含皇帝、富人、牧人、裁缝、木匠、老夫妇与动物，每组下方有一排配色圆点" width="780" height="381" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-              <figcaption class="w__cap">游戏人物设计<span class="nb">「哈尼卡」</span>故事人物与配色方案</figcaption>
-            </figure>
-    </div>
-    <div class="works__note">
-      <p class="w__note"><b>说明｜</b>参考达斡尔族现实人物的服饰、头饰<span class="nb">纹样</span>进行设计，本人负责角色正稿、比例图、表情和配色设定，推动达斡尔族非遗文化进入大众视野，把少数民族文化用现代设计语言表达出来。</p>
-      <p class="w__note"><b>可教｜</b>人物IP设计和校园文创设计相关课程。</p>
-    </div>
-  </section>
-
-  <section class="cat" id="c11">
-    <div class="cat__head">
-      <p class="cat__mark"><em>拾壹</em> 动画</p>
-      <div class="cat__meta">
-        <strong>两部短片 · 分镜、<span class="nb">绘制与合成</span></strong>
-        <span>两部动画从分镜、绘制到合成都是自己做的。</span>
-      </div>
-    </div>
-    <h3 class="works__group">动画《忆东师早期建校史，岁月峥嵘不改鲜红底色》<small>作品时长 2 分 3 秒</small></h3>
-    <div class="works works--2">
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design01.jpg" data-video="" data-cap="版画／木刻风格主题插画：放射状光芒下的一栋成排竖窗的校舍，山丘以白色波浪线表现云气，前景是逆光行走的人群剪影" data-note="">
-                <img src="assets/design01_t.jpg" alt="版画／木刻风格主题插画：放射状光芒下的一栋成排竖窗的校舍，山丘以白色波浪线表现云气，前景是逆光行走的人群剪影" width="780" height="487" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design02.jpg" data-video="" data-cap="深色颗粒肌理背景上的大屏幕／展板：板面分为黑底星群与米白版面两半，下方是一排带白色描边的红色人背影剪影" data-note="">
-                <img src="assets/design02_t.jpg" alt="深色颗粒肌理背景上的大屏幕／展板：板面分为黑底星群与米白版面两半，下方是一排带白色描边的红色人背影剪影" width="780" height="551" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design03.jpg" data-video="" data-cap="版画风格插画：穿西装打领带的男子在讲台后演讲，台上有两支话筒，身后是红色的人群剪影组成的人海，前景长桌有红色斜排线" data-note="">
-                <img src="assets/design03_t.jpg" alt="版画风格插画：穿西装打领带的男子在讲台后演讲，台上有两支话筒，身后是红色的人群剪影组成的人海，前景长桌有红色斜排线" width="780" height="551" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-src="assets/design04.jpg" data-video="" data-cap="版画风格插画：左侧男性伏案书写，中部一张写着「战火中诞生的东北大学」的白纸，下方红色绶带与星形纹样，右上是青顶白墙的建筑群" data-note="">
-                <img src="assets/design04_t.jpg" alt="版画风格插画：左侧男性伏案书写，中部一张写着「战火中诞生的东北大学」的白纸，下方红色绶带与星形纹样，右上是青顶白墙的建筑群" width="780" height="498" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-            </figure>
-    </div>
-
-
-    <h3 class="works__group">动画《假如我是一片树叶》<small>毕业动画创作 · 2023 年 5 月</small></h3>
-    <div class="works works--2">
-      <figure class="w">
-              <button class="w__btn" type="button" data-video="" data-src="assets/img75.jpg" data-cap="扁平插画（含文字排版）：砖红与米白色块构成的叶形画面上，中部偏下是白色手写标题「假如我是一片树叶」，右下角小字「毕业动画创作 2023.05」" data-note="">
-                <img src="assets/img75_t.jpg" alt="扁平插画，砖红与米白色块构成叶形画面，画面含白色手写标题「假如我是一片树叶」" width="780" height="369" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-            </figure>
-      <figure class="w">
-              <button class="w__btn" type="button" data-video="" data-src="assets/img76.jpg" data-cap="彩色水下主题插画：蓝底水波纹前，一张少女的脸被左右两条鱼（黄绿与粉红）夹在中间，鱼身用粗描边与平涂色块装饰" data-note="">
-                <img src="assets/img76_t.jpg" alt="彩色水下主题插画，蓝底水波纹前少女的脸被左右两条鱼夹在中间" width="780" height="439" loading="lazy" decoding="async">
-                <span class="w__zoom" aria-hidden="true">点击放大</span>
-              </button>
-            </figure>
-    </div>
-  </section>
-
-  <section class="cat" id="c12">
-    <div class="cat__head">
-      <p class="cat__mark"><em>拾贰</em> 素描</p>
-      <div class="cat__meta">
-        <strong>素描 · 观察与表现</strong>
-        <span>铅笔与炭笔的人物与肖像作业，<span class="nb">可作写生课的步骤示范。</span></span>
-      </div>
-    </div>
-    <div class="works">
-            <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img72.jpg" data-cap="炭笔或石墨肖像习作：穿格纹衬衫的中年男性坐姿，明暗关系与面部结构刻画清楚" data-note="">
-          <img src="assets/img72_t.jpg" alt="炭笔或石墨肖像习作，穿格纹衬衫的中年男性坐姿" width="586" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">人物半身像<small>作品尺寸 <span class="nb">75×52 厘米</span></small></figcaption>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/img73.jpg" data-cap="炭笔或石墨人物肖像：年长男性坐着并双手交握，衣褶、手部与面部光影得到重点表现" data-note="">
-          <img src="assets/img73_t.jpg" alt="炭笔或石墨人物肖像，年长男性坐着并双手交握，衣褶与手部光影重点表现" width="463" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">人物全身像<small>作品尺寸 <span class="nb">105×75 厘米</span></small></figcaption>
-      </figure>
-    </div>
-    <div class="works__note">
-      <p class="w__note"><b>可教｜</b>素描人物造型课程</p>
-    </div>
-  </section>
-
-<section class="cat" id="micro">
-    <div class="cat__head">
-      <p class="cat__mark"><em>拾叁</em> 微课</p>
-      <div class="cat__meta">
-        <strong>自己录、<span class="nb">自己剪的美术微课</span></strong>
-        <span>面向中小学美术教学开发微课资源，全平台累计播放<span class="nb">5.63 万次</span>。</span>
-      </div>
-    </div>
-    <div class="works works--2">
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/micro02.jpg" data-cap="手机端微课投稿列表截图：四条美术微课，含封面、时长、标题、日期、播放量与评论数" data-note="">
-          <img src="assets/micro02_t.jpg" alt="手机端微课投稿列表截图，四条美术微课带封面与播放量" width="604" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">微课<span class="nb">「延乔微语」</span>bilibili账号</figcaption>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/micro01.jpg" data-cap="手机端账号作品列表截图：三列共十二支视频封面，含美术课例与革命史专题" data-note="">
-          <img src="assets/micro01_t.jpg" alt="手机端账号作品列表截图，十二支视频封面" width="372" height="780" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap">微课<span class="nb">「延乔微语」</span>bilibili账号</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="cat" id="ai">
-    <div class="cat__head">
-      <p class="cat__mark"><em>拾肆</em> AI 数字美育</p>
-      <div class="cat__meta">
-        <strong>网页作品与虚拟展馆</strong>
-        <span>把美术课的内容做成能在浏览器里走一遍的数字展馆。学习过程会留下数据，<span class="nb">老师看得见。</span></span>
-      </div>
-    </div>
-    <div class="works works--2">
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/ai01.jpg" data-cap="网页截图「京华智能导览 · 学情诊断与分析」：六维度学情雷达图、智能评语生成、本次诊断重点、推荐资源与导出 PDF 报告按钮" data-note="项目｜参与数字美育平台的学情模块：把地图探索、展馆学习、智能问答与学习任务的数据汇总成个体化学情档案，自动生成评语并推荐下一步资源。">
-          <img src="assets/ai01_t.jpg" alt="京华智能导览学情诊断与分析网页截图，含学情雷达图与智能评语" width="780" height="519" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap"><span class="nb"><span class="nb"><span class="nb">「京华智能导览」</span></span></span>学情诊断与分析页</figcaption>
-        <p class="w__note"><b>项目｜</b>数字美育平台的学情模块：把地图探索、展馆学习、智能问答与学习任务的数据汇总成个体化学情档案，自动生成评语并推荐下一步资源。</p>
-      </figure>
-      <figure class="w">
-        <button class="w__btn" type="button" data-src="assets/ai02.jpg" data-cap="网页截图「京华智能导览 · 数字展览理解」：虚拟展馆首页，含景泰蓝馆、皮影馆、北京近代绘画馆、古籍馆四张展馆卡片与本周特展" data-note="项目｜把景泰蓝、皮影、北京近代绘画与古籍四个专题做成可进入的虚拟展馆，每个展馆配展品与课程资源，学生可以自己走一遍。">
-          <img src="assets/ai02_t.jpg" alt="京华智能导览数字展览理解网页截图，含四个虚拟展馆入口" width="780" height="585" loading="lazy" decoding="async">
-          <span class="w__zoom" aria-hidden="true">点击放大</span>
-        </button>
-        <figcaption class="w__cap"><span class="nb"><span class="nb"><span class="nb">「京华智能导览」</span></span></span>数字展览理解（虚拟展馆）</figcaption>
-        <p class="w__note"><b>项目｜</b>把景泰蓝、皮影、北京近代绘画与古籍四个专题做成可进入的虚拟展馆，每个展馆配展品与课程资源，<span class="nb">学生可以自己走一遍。</span></p>
-      </figure>
-    </div>
-  </section>
-
-
-</main>
+  </main>
 
 <section class="close" aria-labelledby="h-close">
   <div class="wrap">
     <div class="close__body">
-      <h2 id="h-close">胡雪纯 · 美术教师求职</h2>
+      <h2 id="h-close">胡雪纯 · 应聘美术教师</h2>
       <p class="close__sub">美术教育 · 数字美育</p>
-      <p id="contact">
-        <a href="tel:13806370838">138 0637 0838</a>
-        <a href="mailto:2253002153@cnu.edu.cn">2253002153@cnu.edu.cn</a>
-      </p>
     </div>
     <div class="colophon">
-      <span>十四个栏目 · <span class="nb">四十七件</span>作品</span>
-      <span>十四个栏目：教学、书法、剪纸、国画、版画、<span class="nb">油画</span>、综合材料、水彩、<span class="nb">马克笔</span>、设计、<span class="nb">动画、素描、微课与 AI 数字美育</span></span>
+      <span>五大类 · 十五项 · <span class="nb">四十七件</span>作品</span>
       <span>另含个人实践 <span class="nb">10 张</span>；<span class="nb">图片均由原作拍摄或扫描</span></span>
     </div>
   </div>
@@ -869,6 +760,6 @@
     </div>
     <p class="lb__cap" id="lb-cap"></p>
   </div>
-</dialog>0:["U7Sio7GnvzAtRwaw6SaM5",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},["$L1",[["$","div",null,{"style":{"display":"contents"},"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{}]],null]]},[null,["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ac488214204267af.css","precedence":"next","crossOrigin":""}]],"$L6"]]]]
+</dialog>0:["stQ6zRhAlLh2wya2OuXXQ",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},["$L1",[["$","div",null,{"style":{"display":"contents"},"dangerouslySetInnerHTML":{"__html":"$2"}}],["$","$L3",null,{}]],null]]},[null,["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[],"styles":null}]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/0a4d5239f6192cb4.css","precedence":"next","crossOrigin":""}]],"$L6"]]]]
 6:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"美术教师作品集｜胡雪纯"}],["$","meta","3",{"name":"description","content":"胡雪纯，中学美术教师应聘作品集：十四个栏目，含教学、书法、剪纸、国画、版画、油画、综合材料、水彩、马克笔、设计、动画、素描、微课与 AI 数字美育，另含个人实践，每件作品附课堂可用性说明。"}],["$","link","4",{"rel":"icon","href":"/icon.png?e2abde81e7aef527","type":"image/png","sizes":"96x96"}]]
 1:null
