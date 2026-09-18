@@ -3,15 +3,30 @@
   var bar = document.getElementById('bar');
   var hero = document.getElementById('top');
 
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        bar.classList.toggle('is-paper', !e.isIntersecting);
-      });
-    }, { rootMargin: '-56px 0px 0px 0px' }).observe(hero);
-  } else {
-    bar.classList.add('is-paper');
+  // 顶栏实测高度回写 --barh：两行手机顶栏、系统字号放大、字体回退都不会让
+  // 首屏负边距（.hero）与锚点偏移（scroll-margin-top）对不上。
+  // 只在 ≤1080px 生效 —— ≥1081px 的桌面端渲染保持逐像素不变。
+  function syncBarHeight() {
+    if (document.documentElement.clientWidth > 1080) { return; }
+    var h = Math.round(bar.getBoundingClientRect().height);
+    if (h > 0) { document.documentElement.style.setProperty('--barh', h + 'px'); }
   }
+  syncBarHeight();
+  window.addEventListener('resize', syncBarHeight);
+  if (window.ResizeObserver) { new ResizeObserver(syncBarHeight).observe(bar); }
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(syncBarHeight); }
+
+  // 顶栏底色：页面一旦开始滚动就必须不透明 —— 否则正文会从透明的顶栏下面穿过去，
+  // 与署名行、栏目带叠成一片。旧判据把「离开首屏」写死成 -56px，而手机两行顶栏实测 92px，
+  // 于是整个首屏滚动区间（手机约 1000px）顶栏都是透明的，正文穿过它。
+  var barPaper = null;
+  function syncBarPaper() {
+    var on = (window.pageYOffset || document.documentElement.scrollTop || 0) > 8;
+    if (on !== barPaper) { barPaper = on; bar.classList.toggle('is-paper', on); }
+  }
+  syncBarPaper();
+  window.addEventListener('scroll', syncBarPaper, { passive: true });
+  window.addEventListener('resize', syncBarPaper);
 
   var dialog = document.getElementById('lb');
   var img = document.getElementById('lb-img');
@@ -22,7 +37,7 @@
 
   // 当前位置指示：滚到哪个门类，顶栏对应链接就点亮
   var links = {};
-  Array.prototype.forEach.call(document.querySelectorAll('.bar__links a[href^="#"]'), function (a) {
+  Array.prototype.forEach.call(document.querySelectorAll('.bar a[href^="#"]'), function (a) {
     links[a.getAttribute('href').slice(1)] = a;
   });
   var cats = Object.keys(links).map(function (id) { return document.getElementById(id); }).filter(Boolean);
@@ -39,6 +54,23 @@
       if (id === bestId) { links[id].setAttribute('aria-current', 'true'); }
       else { links[id].removeAttribute('aria-current'); }
     });
+    // 窄屏顶栏是一条可横滑的栏目带：把当前栏目滚到中间，否则高亮项常常在屏幕外。
+    // 用 scrollLeft 而不是 scrollIntoView —— 老 WebView 不认 scrollIntoView 的参数对象。
+    var el = bestId ? links[bestId] : null;
+    if (el) {
+      var strip = el.parentNode;
+      if (strip && strip.scrollWidth > strip.clientWidth + 1) {
+        var r = el.getBoundingClientRect(), s = strip.getBoundingClientRect();
+        if (r.left < s.left + 8 || r.right > s.right - 8) {
+          strip.scrollLeft += (r.left - s.left) - (s.width - r.width) / 2;
+        }
+      }
+    } else {
+      // 没有活动栏目（例如回到首屏）时把栏目带复位到开头：
+      // 否则「滑到底再回顶部」会停在上次的位置，第一眼看到的是最边缘的几个门类
+      var back = document.querySelector('.bar__links');
+      if (back && back.scrollLeft > 0) { back.scrollLeft = 0; }
+    }
   }
 
   if ('IntersectionObserver' in window) {
@@ -127,8 +159,13 @@
     return (w > 0 && h > 0) ? w / h : 0;
   }
 
-  function layout() {
+  function layout(force) {
     rows.forEach(function (row) {
+      // 手机地址栏伸缩会触发 resize：容器宽度没变就不重排，
+      // 免得增删 .rowbrk 让滚动中的版面抖一下
+      var cw = row.clientWidth;
+      if (!force && row.__lastW === cw) { return; }
+      row.__lastW = cw;
       var items = Array.prototype.filter.call(row.children, function (el) {
         return el.className.indexOf('w') === 0 || /(^|\s)w(\s|$)/.test(el.className);
       });
@@ -139,7 +176,10 @@
         var w = parseFloat(img.getAttribute('width'));
         var h = parseFloat(img.getAttribute('height'));
         // 顺手把比例写进样式：图片没加载完时也能先把高度占住，页面不会在滚动中「长高」跳位
-        if (w > 0 && h > 0) { img.style.aspectRatio = w + ' / ' + h; }
+        if (w > 0 && h > 0) {
+          img.style.aspectRatio = w + ' / ' + h;   // 现代内核：先按比例占位
+          img.style.height = '';                   // 高度统一由下面的分配循环写成 px
+        }
         return (w > 0 && h > 0) ? w / h : 0;
       });
       if (ars.some(function (a) { return !a; })) { return; }   // 拿不到比例就保持原来的网格
@@ -194,17 +234,22 @@
           // 铺满整行时最后一件吃掉取整误差（同高）；限高时每件按各自比例算，整行交给 CSS 居中
           var w = (capped || k < group.length - 1) ? Math.round(h * ars[group[k]]) : (avail - used);
           used += w;
-          items[group[k]].style.width = w + 'px';
+          var it = items[group[k]];
+          it.style.width = w + 'px';
+          // 高度也写死成 px：不依赖 aspect-ratio（微信老内核可能不认），
+          // 同时让图片还没解码完就已占住高度，滚动中不会「长高」（锚点与顶栏高亮才不会失准）
+          var im = it.querySelector('img');
+          if (im) { im.style.width = '100%'; im.style.height = Math.round(h) + 'px'; }
         }
       });
     });
   }
 
-  layout();
+  layout(true);
   var timer = null;
   window.addEventListener('resize', function () {
     if (timer) { clearTimeout(timer); }
     timer = setTimeout(layout, 150);
   });
-  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(layout); }
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(function () { layout(true); }); }
 })();

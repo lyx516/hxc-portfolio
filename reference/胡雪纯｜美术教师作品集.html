@@ -91,9 +91,10 @@
   .hero__meta b{color:var(--seal);font-weight:700}
   .hero__work{margin:0;justify-self:end;max-width:100%}
   .hero__work img{
+    height:clamp(260px,53vh,560px);
     height:clamp(260px,53svh,560px);width:auto;max-width:100%;
-    border:1px solid rgba(26,24,21,.32);
-    background:#E9E2D2;padding:14px;
+    border:1px solid rgba(26,24,21,.22);
+    background:var(--paper-deep);padding:14px;
   }
   .hero__work figcaption{
     margin-top:11px;font-family:var(--kai);font-size:13px;color:var(--gray);text-align:right;
@@ -123,7 +124,7 @@
     font-size:clamp(31px,4.4vw,68px);line-height:1;letter-spacing:.03em;color:var(--ink);
   }
   .toc__word i{display:inline-block;font-style:normal}
-  .toc__word i:nth-child(1){font-size:.96em;transform:rotate(-3.6deg) translateY(3px);margin-right:-.018em}
+  .toc__word i:nth-child(1){font-size:1.01em;transform:rotate(-3.6deg) translateY(3px);margin-right:-.018em}
   .toc__word i:nth-child(2){font-size:1.07em;transform:rotate(2.2deg) translateY(-4px);margin-right:.022em}
   .toc__word i:nth-child(3){font-size:.93em;transform:rotate(-1.5deg) translateY(2px);margin-right:.046em}
   .toc__word i:nth-child(4){font-size:1.03em;transform:rotate(2.8deg) translateY(-2px);margin-right:-.03em}
@@ -279,7 +280,7 @@
   .cat__mark em{font-style:normal;color:var(--seal)}
   .cat__meta{margin:0}
   .cat__meta strong{display:block;font-size:clamp(19px,2.1vw,25px);font-weight:900;letter-spacing:.03em;text-wrap:balance}
-  .cat__meta > span{display:block;font-family:var(--kai);color:var(--gray);font-size:15px;margin-top:6px;max-width:40em;text-wrap:pretty}
+  .cat__meta > span{display:block;font-family:var(--kai);color:var(--gray);font-size:15px;margin-top:6px;max-width:46em;text-wrap:pretty}
 
   .works{columns:3;column-gap:clamp(16px,2vw,30px)}
   .works--2{columns:2}
@@ -313,6 +314,14 @@
     aspect-ratio:16/10;object-fit:contain;object-position:50% 50%;
     background:var(--paper-deep);border:1px solid rgba(110,103,92,.4);max-height:none;
   }
+  /* 老内核（不认 aspect-ratio）兜底：不强行造画框，按原比例限高居中，图完整、不裁切、不溢出。
+     有 JS 时走「等高一行」，宽度与高度都是行内样式，优先级更高，不受这条影响。 */
+  @supports not (aspect-ratio: 1 / 1){
+    #c3 .w__btn img,#c4 .w__btn img,#c9 .w__btn img{
+      width:auto;max-width:100%;max-height:min(52vh,420px);
+      margin:0 auto;background:none;border:0;
+    }
+  }
   .w__zoom{
     position:absolute;right:0;bottom:0;z-index:2;
     background:var(--paper);color:var(--ink);
@@ -322,7 +331,10 @@
   }
   .w__btn:hover .w__zoom,.w__btn:focus-visible .w__zoom{opacity:1}
   @media (hover:none){
-    .w__zoom{opacity:.82}
+    /* 57 张卡片各挂一块角标会压住作品；改由目录页一句提示承担 */
+    .w__zoom{display:none}
+    .lb__top button{padding:11px 16px}
+    .lb__nav{padding:16px 14px}
   }
   .works--2 .w__btn img,.works--2 .w__cap,.works--2 .w__note{max-width:640px}
   .works--grid2{
@@ -377,7 +389,7 @@
     text-wrap:pretty;
   }
   .w__note b{color:var(--seal);font-weight:700;letter-spacing:.04em;white-space:nowrap}
-  .works__note{margin:16px 0 0;max-width:48em}
+  .works__note{margin:16px 0 0;max-width:48em;text-wrap:pretty}
 
   /* ── 收尾 ───────────────────────────────── */
   .close{padding:0;border-top:1px solid var(--rule);scroll-margin-top:var(--barh)}
@@ -405,7 +417,10 @@
   /* ── 放大查看 ────────────────────────────── */
   dialog.lb{
     display:none;
-    width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;
+    /* 老内核 / 无 showModal 的回退分支也要能满屏，不会定位到文档顶部 */
+    position:fixed;inset:0;
+    width:100%;height:100vh;height:100dvh;
+    max-width:none;max-height:none;margin:0;padding:0;border:0;
     background:rgba(12,11,10,.96);color:var(--paper);
   }
   dialog.lb[open]{display:flex;flex-direction:column}
@@ -413,6 +428,7 @@
   .lb__inner{
     flex:1;min-height:0;display:flex;flex-direction:column;
     padding:clamp(14px,3vh,30px) clamp(14px,3vw,44px);
+    padding-bottom:calc(clamp(14px,3vh,30px) + env(safe-area-inset-bottom));
     gap:14px;
   }
   .lb__top{display:flex;justify-content:space-between;align-items:center;gap:18px;font-family:var(--kai);font-size:14px;color:#BDB6A9}
@@ -444,31 +460,45 @@
   }
   @media (max-width:820px){
     .bar__links{
+      /* 不再用渐隐遮罩：遮罩会把正好落在边缘的那个字洗成半张（实测 768 档残留 14% 墨的残影）。
+         栏目带已有「回到首屏复位到开头」+「当前栏目自动居中」，硬切边读者看得懂。 */
       flex:0 1 auto;max-width:46vw;
-      -webkit-mask-image:linear-gradient(90deg,#000 0,#000 76%,transparent 100%);
-      mask-image:linear-gradient(90deg,#000 0,#000 76%,transparent 100%);
     }
   }
+  /* 761—900px（平板）：hero 图按 53svh 会到 543px，把首屏顶满、下面留一大块空纸 */
+  @media (min-width:761px) and (max-width:900px){
+    .hero__work img{height:clamp(240px,40vh,380px);height:clamp(240px,40svh,380px)}
+  }
   @media (max-width:760px){
-    :root{--barh:56px}
+    :root{--barh:85px}
     body{font-size:16px;line-height:1.8}
-    .bar{padding:0 18px;height:var(--barh);gap:14px;align-items:center}
-    .bar__links{gap:15px;font-size:14.5px}
+    /* 一行放不下 17 个栏目 + 署名：拆成「署名行 + 栏目横滑行」，
+       min-height 用 --barh（页尾脚本会回写实测高度），首屏负边距与锚点偏移都跟着它走 */
+    .bar{
+      padding:5px 0 0;height:auto;min-height:var(--barh);gap:2px;
+      flex-direction:column;align-items:stretch;
+    }
+    .bar__name{font-size:15px;margin:0 18px}
+    .bar__links{
+      gap:20px;font-size:15px;max-width:none;padding:4px 18px 8px;
+    }
+    .bar__links a{padding:11px 2px 5px;line-height:1.4}
     .hero{padding:calc(var(--barh) + 10px) 0 12px}
     .hero__inner{grid-template-columns:1fr;gap:14px;padding:0 18px}
     .hero__h1{font-size:clamp(30px,8.6vw,42px);margin-top:.3em}
-    .hero__sub{font-size:15px;margin-top:.6em;line-height:1.75}
+    .hero__sub{font-size:15.5px;margin-top:.6em;line-height:1.75}
     .hero__rule{margin-top:14px}
     .hero__meta{font-size:12.5px;margin-top:10px}
     .hero__work{justify-self:start;width:100%}
     .hero__work img{
+      height:min(26vh,214px);
       height:min(26svh,214px);width:auto;max-width:100%;
-      background:#E9E2D2;padding:9px;
+      background:var(--paper-deep);padding:9px;
     }
-    .hero__work figcaption{margin-top:8px;font-size:12.5px;text-align:left}
+    .hero__work figcaption{margin-top:8px;font-size:13px;text-align:left}
     .hero__lede{grid-template-columns:1fr;gap:9px;padding:10px 18px 0;margin-top:10px}
-    .hero__lede .lead{font-size:14.5px;line-height:1.78}
-    .hero__lede .teach{font-size:13.5px;line-height:1.85}
+    .hero__lede .lead{font-size:15.5px;line-height:1.78}
+    .hero__lede .teach{font-size:15px;line-height:1.85}
     .cat__head{grid-template-columns:1fr;gap:8px}
     .plates{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
     .plate img{aspect-ratio:2/1}
@@ -476,17 +506,86 @@
     .w__btn img{max-height:none}
     .w__cap{margin-top:14px;font-size:16.5px}
     .cat__mark{font-size:22px}
+    .cat__meta > span{font-size:15.5px}
+    .w__cap small{font-size:14.5px}
+    .colophon{font-size:14px}
     .close__body{grid-template-columns:1fr;gap:18px}
     .index{padding-top:30px}
     .lb__nav{padding:12px 9px;font-size:17px}
     .lb__prev{left:-8px}
     .lb__next{right:-8px}
   }
+  /* ── 首屏动线（第十一轮 B）─────────────────────────
+     首屏只回答三件事：我是谁 / 我能教什么 / 怎么联系。
+     用「一条一条能查证的证据」而不是统计数字 —— 数字回答不了「能不能带中学」。 */
+  .hero__facts{list-style:none;margin:20px 0 0;padding:0;max-width:38em}
+  .hero__facts li{
+    font-family:var(--kai);font-size:clamp(15px,1.35vw,16.5px);line-height:1.9;
+    color:var(--gray-2);padding:5px 0;border-bottom:1px solid var(--rule);
+  }
+  .hero__facts li:last-child{border-bottom:0}
+  /* 标签定宽：三条细节的左边缘对齐成一列，扫读时视线不用跳。
+     注意只在 ≥901px 成立 —— 768 档的文字列只剩约 400px，12.5em 的标签列会把细节
+     挤成「标签独占一行 + 右侧约 300px 空纸」 */
+  .hero__facts b{color:var(--ink);font-weight:700;white-space:nowrap;display:inline-block;min-width:12.5em;vertical-align:top}
+  .hero__fact{display:inline}
+  @media (min-width:901px){
+    .hero__facts li{display:grid;grid-template-columns:12.5em minmax(0,1fr);column-gap:1.1em;align-items:baseline}
+    .hero__facts b{display:block;min-width:0}
+  }
+  @media (max-width:900px){
+    .hero__facts b{display:inline;min-width:0;margin-right:.5em}
+  }
+  .hero__go{
+    margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px 26px;align-items:baseline;
+    font-family:var(--kai);font-size:clamp(15px,1.4vw,17px);
+  }
+  .hero__go a{color:var(--seal);text-decoration:none;border-bottom:1px solid var(--seal);white-space:nowrap}
+  .hero__go a:hover{color:var(--ink);border-bottom-color:var(--ink)}
+  .hero__lede .teach a{color:var(--seal);text-decoration:none;border-bottom:1px solid var(--seal);white-space:nowrap}
+  .hero__lede .teach a b{color:var(--seal)}
+  .hero__lede .teach a:hover{border-bottom-color:var(--ink)}
+  .hero__lede .teach a:hover b{color:var(--ink)}
+  /* 目录页：一句放大查看提示，替代触屏上全站常显的角标 */
+  .toc__hint{margin:14px 0 0;font-family:var(--kai);font-size:clamp(14px,1.2vw,15px);color:var(--gray)}
+  .hint-coarse{display:none}
+  @media (hover:none),(max-width:900px){.hint-fine{display:none}.hint-coarse{display:inline}}
+  .toc__cn b{color:var(--ink);font-weight:700}
+  /* 组标题里的「尺寸 · 奖项」：窄屏把分隔点收掉，两段各自完整换行，不再出现孤立的「·」 */
+  @media (max-width:600px){
+    .works__group small .nb.sep{display:none}
+    .works__group small .nb.sep + .nb{margin-left:.6em}
+  }
+  /* 顶栏动线：门类聚成三簇（教学·实践 ／ 十四个门类 ／ 微课·AI），「联系」常驻最右 */
+  .bar__links a[href="#practice"],.bar__links a[href="#micro"]{margin-left:12px}
+  .bar__contact{
+    flex:0 0 auto;text-decoration:none;white-space:nowrap;color:var(--seal);
+    border-bottom:1px solid transparent;padding-bottom:2px;
+  }
+  .bar__contact:hover{border-bottom-color:currentColor}
+  .bar__contact[aria-current]{border-bottom-color:currentColor}
+  @media (max-width:760px){
+    .hero__facts{margin-top:15px}
+    .hero__facts li{font-size:15.5px;line-height:1.8;padding:4px 0}
+    .hero__facts b{display:inline;min-width:0;margin-right:.5em}
+    .hero__go{margin-top:15px;gap:8px 22px;font-size:16px}
+    /* 「联系」钉在署名行右侧：任何滚动位置都点得到（第四段动线的兜底） */
+    .bar__contact{position:absolute;right:10px;top:2px;padding:8px 10px;font-size:15px}
+  }
+  /* ≤900px 的证据行：整条做悬挂缩进（标签顶在左边缘，续行缩进 1.2em）。
+     两段之间只用空格分隔 —— 不放「·」，行尾与行首都不会出现孤立的点号。 */
+  @media (max-width:900px){
+    .hero__facts li{padding-left:1.2em;text-indent:-1.2em}
+  }
   @media (prefers-reduced-motion:reduce){
     *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
   }
   @media (prefers-reduced-motion:no-preference){
     html{scroll-behavior:smooth}
+  }
+  /* 窄屏关掉平滑滚动：手机端页面高 3.3 万像素，点一个栏目要滑很久，而且滚动中重排更明显 */
+  @media (prefers-reduced-motion:no-preference) and (max-width:760px){
+    html{scroll-behavior:auto}
   }
 </style>
 </head>
@@ -500,8 +599,8 @@
     <a href="#c4">国画</a><a href="#c5">版画</a><a href="#c6">油画</a><a href="#c7">综合材料</a>
     <a href="#c8">水彩</a><a href="#c9">马克笔</a><a href="#c10">设计</a><a href="#c11">动画</a>
     <a href="#c12">素描</a><a href="#micro">微课</a><a href="#ai">AI</a>
-    <a href="#contact">联系</a>
   </span>
+  <a class="bar__contact" href="#contact">联系</a>
 </nav>
 
 <header class="hero" id="top">
@@ -511,27 +610,41 @@
       <h1 class="hero__h1">美术教师作品集</h1>
       <p class="hero__sub">绘画、书法、剪纸、民间美术与课堂教学的记录。</p>
       <hr class="hero__rule">
-      <p class="hero__meta"><b>十四个栏目 · <span class="nb">四十七件</span>作品</b>　个人实践 <span class="nb">10 张</span>　微课与 AI <span class="nb">数字美育 4 张</span></p>
+      <ul class="hero__facts">
+        <li><b>高中美术教师资格证</b><span class="hero__fact"><span class="nb">小学教育（美术）硕士</span> <span class="nb">美术学（师范）本科</span></span></li>
+        <li><b>累计授课 <span class="nb">2000 余课时</span></b><span class="hero__fact">教学对象覆盖<span class="nb">小学一年级至高中三年级</span> <span class="nb">60 余名学生</span></span></li>
+        <li><b>教具设计获奖</b><span class="hero__fact"><span class="nb">吉林省师范生教学大赛三等奖</span> <span class="nb">东北师范大学师范生教具设计一等奖</span></span></li>
+      </ul>
+      <p class="hero__go">
+        <a href="#practice">看课堂现场 10 张</a>
+        <a href="#toc">看目录</a>
+        <a href="tel:13806370838">138 0637 0838</a>
+      </p>
     </div>
     <figure class="hero__work">
-      <img src="assets/img36.jpg" alt="大红剪纸「生命树」：树冠与枝干内嵌生肖动物与人物，底部为红色地面与花草" width="1492" height="1700" fetchpriority="high">
+      <img src="assets/img36.jpg"
+           srcset="assets/img36_t.jpg 685w, assets/img36.jpg 1492w"
+           sizes="(max-width:760px) 60vw, 40vw"
+           alt="大红剪纸「生命树」：树冠与枝干内嵌生肖动物与人物，底部为红色地面与花草"
+           width="1492" height="1700" fetchpriority="high">
       <figcaption>剪纸《生命树》· 民间美术</figcaption>
     </figure>
   </div>
   <div class="hero__lede">
     <div>
-      <p class="lead">绘画是我的专业基础，我也喜欢尝试不同的材料和创作方式。这本作品集收录了我的绘画、<span class="nb">书法</span>、剪纸、羊毛毡、雕塑，以及摄影、设计、<span class="nb">动画和 AI 数字美育。</span></p>
+      <p class="lead">绘画是我的专业基础，我也喜欢尝试不同的材料和创作方式。这本作品集收录了我的绘画、<span class="nb">书法</span>、剪纸、<span class="nb">羊毛毡</span>、雕塑，以及摄影、设计、<span class="nb">动画和 AI 数字美育。</span></p>
       <p class="lead">我希望把这些创作经验带进美术课堂：除了纸上的绘画，也让学生接触多样的手工制作和数字创作，<span class="nb">找到自己喜欢的表达方式。</span></p>
     </div>
-    <p class="teach">首都师范大学 小学教育（美术）硕士<br>东北师范大学 美术学（师范）本科<br><span class="nb">高中美术教师资格证</span> · 中小学授课 <span class="nb">2000 余课时、60 余名学生</span><br>投递邮箱 <b>2253002153@cnu.edu.cn</b>　手机 <b>138 0637 0838</b></p>
+    <p class="teach">首都师范大学 小学教育（美术）硕士<br>东北师范大学 美术学（师范）本科<br>投递邮箱 <a href="mailto:2253002153@cnu.edu.cn"><b>2253002153@cnu.edu.cn</b></a>　<span class="nb">手机 <a href="tel:13806370838"><b>138 0637 0838</b></a></span></p>
   </div>
 </header>
 
 <section class="wrap toc" id="toc" aria-labelledby="h-toc">
   <h2 class="toc__title" id="h-toc">
     <span class="toc__word" aria-label="CONTENTS"><i>C</i><i>O</i><i>N</i><i>T</i><i>E</i><i>N</i><i>T</i><i>S</i></span>
-    <span class="toc__cn">作品集目录 · 十四个栏目<svg class="toc__arrow" viewBox="0 0 74 46" aria-hidden="true"><path d="M5 6c15-2 29 4 37 15 4 6 7 13 9 19"/><path d="M41 32l10 8 2-12"/></svg></span>
+    <span class="toc__cn"><b>十四个栏目 · <span class="nb">四十七件</span>作品</b>（含微课与 AI <span class="nb">数字美育 4 张</span>）　<span class="nb">个人实践 10 张</span><svg class="toc__arrow" viewBox="0 0 74 46" aria-hidden="true"><path d="M5 6c15-2 29 4 37 15 4 6 7 13 9 19"/><path d="M41 32l10 8 2-12"/></svg></span>
   </h2>
+  <p class="toc__hint">点击任意作品可放大查看；放大后<span class="hint-fine">按左右方向键</span><span class="hint-coarse">点两侧箭头</span>翻看上一件、下一件。</p>
   <ol class="toc__grid">
       <li class="toc__item">
         <a href="#c1">
@@ -682,7 +795,7 @@
         <span>黑板布置、综合纸艺展板、手绘导览图——按教案与活动方案整理，可直接复用到课堂与校园文化布置。</span>
       </div>
     </div>
-    <h3 class="works__group">教具《小花猫在睡觉》<small>作品尺寸 52×37 厘米 · 吉林省师范生教学大赛三等奖</small></h3>
+    <h3 class="works__group">教具《小花猫在睡觉》<small><span class="nb">作品尺寸 52×37 厘米</span><span class="nb sep"> · </span><span class="nb">吉林省师范生教学大赛三等奖</span></small></h3>
     <div class="works--grid2">
       <figure class="w">
         <button class="w__btn" type="button" data-src="assets/aid01.jpg" data-cap="剪纸拼贴教具：菱格窗内「福」字与团花，中部是睡着的猫脸造型，四周为花瓣与团花色块" data-note="说明｜围绕人美版二年级上册《小花猫在睡觉》展开设计。本人负责主题构思、画面设计和教具制作；教具设计立足于东北地域文化特色，用可移动的小花猫、窗景、灯笼和花卉等贴近学生生活的形象组织画面，重点聚焦于小花猫的基本形、明亮色彩和重复纹样等教学重点。">
@@ -1331,7 +1444,7 @@
 <section class="close" aria-labelledby="h-close">
   <div class="wrap">
     <div class="close__body">
-      <h2 id="h-close">胡雪纯 · 美术教师求职</h2>
+      <h2 id="h-close">胡雪纯 · 应聘中学美术教师</h2>
       <p class="close__sub">美术教育 · 数字美育</p>
       <p id="contact">
         <a href="tel:13806370838">138 0637 0838</a>
@@ -1340,7 +1453,6 @@
     </div>
     <div class="colophon">
       <span>十四个栏目 · <span class="nb">四十七件</span>作品</span>
-      <span>十四个栏目：教学、书法、剪纸、国画、版画、<span class="nb">油画</span>、综合材料、水彩、<span class="nb">马克笔</span>、设计、<span class="nb">动画、素描、微课与 AI 数字美育</span></span>
       <span>另含个人实践 <span class="nb">10 张</span>；<span class="nb">图片均由原作拍摄或扫描</span></span>
     </div>
   </div>
@@ -1366,15 +1478,30 @@
   var bar = document.getElementById('bar');
   var hero = document.getElementById('top');
 
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        bar.classList.toggle('is-paper', !e.isIntersecting);
-      });
-    }, { rootMargin: '-56px 0px 0px 0px' }).observe(hero);
-  } else {
-    bar.classList.add('is-paper');
+  // 顶栏实测高度回写 --barh：两行手机顶栏、系统字号放大、字体回退都不会让
+  // 首屏负边距（.hero）与锚点偏移（scroll-margin-top）对不上。
+  // 只在 ≤1080px 生效 —— ≥1081px 的桌面端渲染保持逐像素不变。
+  function syncBarHeight() {
+    if (document.documentElement.clientWidth > 1080) { return; }
+    var h = Math.round(bar.getBoundingClientRect().height);
+    if (h > 0) { document.documentElement.style.setProperty('--barh', h + 'px'); }
   }
+  syncBarHeight();
+  window.addEventListener('resize', syncBarHeight);
+  if (window.ResizeObserver) { new ResizeObserver(syncBarHeight).observe(bar); }
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(syncBarHeight); }
+
+  // 顶栏底色：页面一旦开始滚动就必须不透明 —— 否则正文会从透明的顶栏下面穿过去，
+  // 与署名行、栏目带叠成一片。旧判据把「离开首屏」写死成 -56px，而手机两行顶栏实测 92px，
+  // 于是整个首屏滚动区间（手机约 1000px）顶栏都是透明的，正文穿过它。
+  var barPaper = null;
+  function syncBarPaper() {
+    var on = (window.pageYOffset || document.documentElement.scrollTop || 0) > 8;
+    if (on !== barPaper) { barPaper = on; bar.classList.toggle('is-paper', on); }
+  }
+  syncBarPaper();
+  window.addEventListener('scroll', syncBarPaper, { passive: true });
+  window.addEventListener('resize', syncBarPaper);
 
   var dialog = document.getElementById('lb');
   var img = document.getElementById('lb-img');
@@ -1385,7 +1512,7 @@
 
   // 当前位置指示：滚到哪个门类，顶栏对应链接就点亮
   var links = {};
-  Array.prototype.forEach.call(document.querySelectorAll('.bar__links a[href^="#"]'), function (a) {
+  Array.prototype.forEach.call(document.querySelectorAll('.bar a[href^="#"]'), function (a) {
     links[a.getAttribute('href').slice(1)] = a;
   });
   var cats = Object.keys(links).map(function (id) { return document.getElementById(id); }).filter(Boolean);
@@ -1402,6 +1529,23 @@
       if (id === bestId) { links[id].setAttribute('aria-current', 'true'); }
       else { links[id].removeAttribute('aria-current'); }
     });
+    // 窄屏顶栏是一条可横滑的栏目带：把当前栏目滚到中间，否则高亮项常常在屏幕外。
+    // 用 scrollLeft 而不是 scrollIntoView —— 老 WebView 不认 scrollIntoView 的参数对象。
+    var el = bestId ? links[bestId] : null;
+    if (el) {
+      var strip = el.parentNode;
+      if (strip && strip.scrollWidth > strip.clientWidth + 1) {
+        var r = el.getBoundingClientRect(), s = strip.getBoundingClientRect();
+        if (r.left < s.left + 8 || r.right > s.right - 8) {
+          strip.scrollLeft += (r.left - s.left) - (s.width - r.width) / 2;
+        }
+      }
+    } else {
+      // 没有活动栏目（例如回到首屏）时把栏目带复位到开头：
+      // 否则「滑到底再回顶部」会停在上次的位置，第一眼看到的是最边缘的几个门类
+      var back = document.querySelector('.bar__links');
+      if (back && back.scrollLeft > 0) { back.scrollLeft = 0; }
+    }
   }
 
   if ('IntersectionObserver' in window) {
@@ -1490,8 +1634,13 @@
     return (w > 0 && h > 0) ? w / h : 0;
   }
 
-  function layout() {
+  function layout(force) {
     rows.forEach(function (row) {
+      // 手机地址栏伸缩会触发 resize：容器宽度没变就不重排，
+      // 免得增删 .rowbrk 让滚动中的版面抖一下
+      var cw = row.clientWidth;
+      if (!force && row.__lastW === cw) { return; }
+      row.__lastW = cw;
       var items = Array.prototype.filter.call(row.children, function (el) {
         return el.className.indexOf('w') === 0 || /(^|\s)w(\s|$)/.test(el.className);
       });
@@ -1502,7 +1651,10 @@
         var w = parseFloat(img.getAttribute('width'));
         var h = parseFloat(img.getAttribute('height'));
         // 顺手把比例写进样式：图片没加载完时也能先把高度占住，页面不会在滚动中「长高」跳位
-        if (w > 0 && h > 0) { img.style.aspectRatio = w + ' / ' + h; }
+        if (w > 0 && h > 0) {
+          img.style.aspectRatio = w + ' / ' + h;   // 现代内核：先按比例占位
+          img.style.height = '';                   // 高度统一由下面的分配循环写成 px
+        }
         return (w > 0 && h > 0) ? w / h : 0;
       });
       if (ars.some(function (a) { return !a; })) { return; }   // 拿不到比例就保持原来的网格
@@ -1557,19 +1709,24 @@
           // 铺满整行时最后一件吃掉取整误差（同高）；限高时每件按各自比例算，整行交给 CSS 居中
           var w = (capped || k < group.length - 1) ? Math.round(h * ars[group[k]]) : (avail - used);
           used += w;
-          items[group[k]].style.width = w + 'px';
+          var it = items[group[k]];
+          it.style.width = w + 'px';
+          // 高度也写死成 px：不依赖 aspect-ratio（微信老内核可能不认），
+          // 同时让图片还没解码完就已占住高度，滚动中不会「长高」（锚点与顶栏高亮才不会失准）
+          var im = it.querySelector('img');
+          if (im) { im.style.width = '100%'; im.style.height = Math.round(h) + 'px'; }
         }
       });
     });
   }
 
-  layout();
+  layout(true);
   var timer = null;
   window.addEventListener('resize', function () {
     if (timer) { clearTimeout(timer); }
     timer = setTimeout(layout, 150);
   });
-  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(layout); }
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(function () { layout(true); }); }
 })();
 </script>
 </body>
