@@ -53,16 +53,15 @@
   .bar__links a:hover{opacity:1;border-bottom-color:currentColor}
   .bar__links a[aria-current]{opacity:1;color:var(--seal);border-bottom-color:var(--seal)}
 
-  /* ── 起首：宣纸留白 + 装裱式作品图 ─────────── */
+  /* ── 起首：只有一个标题（第十三轮按指令删掉统计／证据行／出口／装裱图／自我介绍／联系方式） ── */
   .hero{
     margin-top:calc(-1 * var(--barh));
     background:var(--paper);color:var(--ink);
-    padding:calc(var(--barh) + clamp(12px,2.4vh,32px)) 0 clamp(16px,2.6vh,34px);
+    padding:calc(var(--barh) + clamp(8px,1.6vh,20px)) 0 clamp(10px,1.8vh,22px);
     border-bottom:1px solid var(--rule);
   }
   .hero__inner{
-    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.66fr);
-    gap:clamp(20px,3.6vw,64px);align-items:center;
+    display:block;
     padding:0 clamp(20px,5vw,96px);
   }
   .hero__id{
@@ -70,52 +69,22 @@
     letter-spacing:.08em;color:var(--gray);
   }
   .hero__h1{
-    margin:.42em 0 0;font-size:clamp(40px,5.4vw,80px);font-weight:900;
+    margin:.3em 0 0;font-size:clamp(34px,4.6vw,66px);font-weight:900;
     line-height:1.12;letter-spacing:.02em;text-wrap:balance;
   }
-  .hero__sub{
-    margin:.8em 0 0;font-family:var(--kai);font-size:clamp(16px,1.5vw,20px);
-    line-height:1.9;color:var(--gray);max-width:24em;text-wrap:pretty;
-  }
-  .hero__rule{border:0;border-top:1px solid var(--rule);margin:clamp(18px,3.2vh,38px) 0 0}
-  .hero__meta{
-    margin:14px 0 0;font-family:var(--kai);font-size:clamp(13.5px,1.15vw,15.5px);
-    color:var(--gray);letter-spacing:.02em;
-  }
-  .hero__meta b{color:var(--seal);font-weight:700}
-  .hero__work{margin:0;justify-self:end;max-width:100%}
-  .hero__work img{
-    height:clamp(260px,53vh,560px);
-    height:clamp(260px,53svh,560px);width:auto;max-width:100%;
-    border:1px solid rgba(26,24,21,.22);
-    background:var(--paper-deep);padding:14px;
-  }
-  .hero__work figcaption{
-    margin-top:11px;font-family:var(--kai);font-size:13px;color:var(--gray);text-align:right;
-  }
-  .hero__lede{
-    margin-top:clamp(20px,3.2vh,38px);padding:clamp(20px,3.2vh,36px) clamp(20px,5vw,96px) 0;
-    border-top:1px solid var(--rule);
-    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px 48px;align-items:start;
-  }
-  .hero__lede p{margin:0;max-width:34em}
-  .hero__lede .lead{font-size:clamp(16px,1.55vw,19px);line-height:1.9;text-wrap:pretty}
-  .hero__lede .lead + .lead{margin-top:.9em}
-  .hero__lede .teach{font-family:var(--kai);font-size:clamp(14.5px,1.4vw,17px);color:var(--gray);line-height:2}
-  .hero__lede .teach b{color:var(--ink);font-weight:400;white-space:nowrap}
 
-  /* ── 目录页（手账感：粗笔手写数字＋松散错落＋少量手绘涂鸦） ── */
+  /* ── 目录页（手账感：手写 CONTENTS ＋ 手写组号 1—5 ＋ 组内子项横排） ──
+     第十三轮改成两级：5 个组（手写数字＋组名），子项在组内横向排一行 —— 横向铺开是为了
+     让整页目录在手机一屏里放得下（390×844 实测见 v13-fit.js：目录底边必须 ≤ 视口高）。 */
   /* 注意：必须写 .wrap.toc，否则会被后面的 .wrap 简写 padding 覆盖成 0 */
   .wrap.toc{
     position:relative;scroll-margin-top:var(--barh);
-    padding-top:clamp(46px,7vh,92px);padding-bottom:clamp(66px,9vh,124px);
+    padding-top:clamp(22px,3.6vh,48px);padding-bottom:clamp(40px,6.5vh,92px);
   }
   .toc__title{margin:0;position:relative;max-width:100%}
-  /* 标题比原来小约 28%，只占版面左上一小段；字母大小与间距都留一点不规则 */
   .toc__word{
-    display:inline-block;
-    font-family:"Bradley Hand ITC","Ink Free","Segoe Print","Segoe Script","Comic Sans MS",cursive;
-    font-size:clamp(31px,4.4vw,68px);line-height:1;letter-spacing:.03em;color:var(--ink);
+    display:inline-block;font-family:"Bradley Hand ITC","Ink Free","Segoe Print","Segoe Script","Comic Sans MS",cursive;
+    font-size:clamp(31px,4.4vw,68px);line-height:1.04;font-weight:700;color:var(--ink);
   }
   .toc__word i{display:inline-block;font-style:normal}
   .toc__word i:nth-child(1){font-size:1.01em;transform:rotate(-3.6deg) translateY(3px);margin-right:-.018em}
@@ -126,107 +95,100 @@
   .toc__word i:nth-child(6){font-size:1.08em;transform:rotate(1.3deg) translateY(-3px);margin-right:-.022em}
   .toc__word i:nth-child(7){font-size:.94em;transform:rotate(-2.6deg) translateY(1px);margin-right:.05em}
   .toc__word i:nth-child(8){font-size:1.02em;transform:rotate(2deg) translateY(-1px)}
-  .toc__cn{
-    display:block;margin-top:13px;font-family:var(--kai);
-    font-size:clamp(15px,1.3vw,17px);letter-spacing:.05em;color:var(--gray);
+
+  /* 组：一列一组，宽屏分栏（子项横向排一行，靠横向空间省纵向高度） */
+  .toc__groups{
+    list-style:none;margin:clamp(14px,2.6vh,32px) 0 0;padding:0;
+    columns:1;column-gap:clamp(26px,4vw,68px);
   }
-  /* 手绘小箭头：从副标题指下来，只此一处 */
-  .toc__arrow{display:inline-block;width:50px;height:32px;margin-left:12px;vertical-align:-9px;color:var(--gray);opacity:.72}
-  .toc__arrow path{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-  .toc__grid{
-    list-style:none;margin:clamp(32px,5vh,70px) 0 0;padding:0;
-    display:flex;flex-wrap:wrap;align-items:flex-start;position:relative;
+  @media (min-width:1025px){ .toc__groups{columns:3} }
+  @media (min-width:561px) and (max-width:1024px){ .toc__groups{columns:2} }
+  .toc__group{
+    margin:0 0 clamp(12px,1.9vh,22px);
+    break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;
   }
-  /* 不排成整齐的三栏：每条的宽窄、缩进、上下间距都不一样，但每行仍是三条、读起来顺 */
-  .toc__item{
-    flex:0 0 auto;width:31.6%;margin:0 0 clamp(22px,3.2vh,36px);
-    padding-right:clamp(14px,1.8vw,30px);
+  .toc__gh{
+    margin:0;display:flex;align-items:baseline;gap:.5em;flex-wrap:nowrap;
+    font-size:clamp(17px,1.5vw,20px);font-weight:700;letter-spacing:.02em;line-height:1.35;
   }
-  .toc__item:nth-child(3n+2){width:30.2%;margin-left:1.1%;margin-top:11px;margin-bottom:clamp(28px,4.2vh,46px)}
-  .toc__item:nth-child(3n+3){width:32.6%;margin-left:.5%;margin-top:-7px;margin-bottom:clamp(16px,2.4vh,28px)}
-  .toc__item:nth-child(5n+4){margin-top:15px;margin-bottom:clamp(30px,4.6vh,50px)}
-  .toc__item:nth-child(7n+6){margin-top:-5px;margin-bottom:clamp(18px,2.6vh,30px)}
-  .toc__item > a{display:block;text-decoration:none;--numfs:clamp(26px,2.9vw,40px)}
-  /* 数字与栏目名排在同一行，说明文字另起一行；.toc__text 不产生盒子，只留结构 */
-  .toc__text{display:contents}
+  /* 组名要给圈注让位：1 组的圈是「窄而高」的椭圆，右缘会伸到数字盒外约 16px；
+     子项行也要让位，圈的下缘比行盒低（v13-deco.js 实测） */
+  .toc__group--ring .toc__gh{gap:.95em}
+  .toc__group--ring .toc__subs{margin-top:.7em}
+  .toc__numwrap{position:relative;display:inline-block;flex:0 0 auto;font-size:1.3em;line-height:1;transform:rotate(-3deg)}
+  .toc__group:nth-child(2) .toc__numwrap{font-size:1.22em;transform:rotate(2.6deg)}
+  .toc__group:nth-child(3) .toc__numwrap{font-size:1.4em;transform:rotate(-1.4deg)}
+  .toc__group:nth-child(4) .toc__numwrap{font-size:1.26em;transform:rotate(3.4deg)}
+  .toc__group:nth-child(5) .toc__numwrap{font-size:1.34em;transform:rotate(-2.2deg)}
   .toc__num{
-    display:inline-block;
-    font-family:"Segoe Print","Ink Free","Bradley Hand ITC","Comic Sans MS",cursive;
-    font-weight:700;font-size:var(--numfs);line-height:1;color:var(--ink);
-    margin:0 .6em 0 0;transform:rotate(-3deg);
+    display:inline-block;font-weight:700;color:var(--seal);
+    font-family:"Segoe Print","Ink Free","Segoe Script","Bradley Hand ITC","Comic Sans MS",cursive;
   }
-  /* 每个数字歪的角度、大小都不同，像随手写下来的编号 */
-  .toc__item:nth-child(2n) .toc__num{font-size:calc(var(--numfs) * .92);transform:rotate(2.6deg) translateY(1px)}
-  .toc__item:nth-child(3n) .toc__num{font-size:calc(var(--numfs) * 1.07);transform:rotate(-1.4deg) translate(-1px,-2px)}
-  .toc__item:nth-child(5n+4) .toc__num{font-size:calc(var(--numfs) * .96);transform:rotate(3.6deg) translate(2px,2px)}
-  .toc__item:nth-child(7n+6) .toc__num{font-size:calc(var(--numfs) * 1.04);transform:rotate(-2.4deg)}
-  .toc__name{
-    display:inline-block;font-family:var(--kai);font-weight:700;white-space:nowrap;
-    font-size:clamp(17px,1.5vw,20px);letter-spacing:.05em;color:var(--ink);
+  .toc__gh .toc__name{font-family:var(--kai);color:var(--ink);text-decoration:none}
+  .toc__gh:hover .toc__name,.toc__gh a:focus-visible{color:var(--seal)}
+  .toc__subs{
+    list-style:none;margin:.4em 0 0;padding:0;
+    display:flex;flex-wrap:wrap;align-items:baseline;
   }
-  /* 说明文字放大：桌面 15—16px、手机 16px，每条控制在 1—2 行 */
-  .toc__desc{
-    display:block;margin-top:9px;font-family:var(--kai);
-    font-size:clamp(15px,1.35vw,16px);line-height:1.75;color:var(--gray-2);
-    max-width:23em;text-wrap:pretty;
-  }
-  .toc__item > a:hover .toc__name,.toc__item > a:focus-visible .toc__name,
-  .toc__item > a:hover .toc__num,.toc__item > a:focus-visible .toc__num{color:var(--seal)}
-  /* 手绘装饰只出现在少数位置：①1 的小星 ②3 的下划线 ③11 的圈线 ④标题旁箭头 ⑤右下角星芒与铅笔涂鸦 */
-  .toc__star{width:15px;height:15px;margin-left:8px;vertical-align:1px;color:var(--seal);opacity:.65}
+  .toc__item{font-family:var(--kai);font-size:clamp(14.5px,1.22vw,16px);line-height:1.6;white-space:nowrap}
+  .toc__item + .toc__item::before{content:"·";margin:0 .52em;color:var(--gray);opacity:.45}
+  .toc__item a{color:var(--gray-2);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:1px}
+  .toc__item a:hover,.toc__item a:focus-visible{color:var(--ink);border-bottom-color:var(--seal)}
+
+  /* 手绘装饰只加在少数位置：圈注在 1 号数字上、小星在组名后（组 1）、下划线在「剪纸」下（组 3） */
+  .toc__star{width:14px;height:14px;margin-left:.42em;vertical-align:1px;color:var(--seal);opacity:.65;flex:0 0 auto;align-self:center}
   .toc__star path{fill:currentColor}
-  .toc__name--line{position:relative}
-  .toc__line{position:absolute;left:-4px;right:-8px;bottom:-6px;width:auto;height:9px;color:var(--gray);opacity:.6}
-  .toc__line path{fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round}
-  .toc__item--ring{position:relative}
-  /* 圈注随号码字号缩放：盒子宽高比必须等于 viewBox 的 100:78，
-     否则 preserveAspectRatio 会把圈水平居中，右侧圈不住数字。改完用 node probe-ctm.js 验。 */
   .toc__ring{
-    position:absolute;left:calc(var(--numfs) * -.349);top:calc(var(--numfs) * -.29);
-    width:calc(var(--numfs) * 2.218);height:calc(var(--numfs) * 1.73);
-    pointer-events:none;color:var(--seal);opacity:.85;transform:rotate(-3deg);
+    /* 圈注几何按像素判定定过（v13-ring.js）。两个坑：
+       ① 必须 preserveAspectRatio="none"：100:78 的固定比例会把圈横向拉宽、纵向压扁；
+       ② 圈要够大，因为手写体「1」的墨迹是 0.61em×0.69em 的「方块」，
+          椭圆的边界在斜角处会凹进来、切到数字左下角 —— 只按上下留白算会误判。
+       当前 1.3em × 1.65em：红圈↔号码（画到墨）约 2.7px、红圈↔组名 >12px。 */
+    position:absolute;left:50%;top:calc(50% + .03em);width:1.3em;height:1.65em;color:var(--seal);opacity:.9;
+    transform:translate(-50%,-50%);pointer-events:none;
   }
   .toc__ring path{fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;vector-effect:non-scaling-stroke}
+  /* 下划线定位在 <a> 上而不是 <li> 上：li 的盒子里含「·」分隔点，
+     挂在 li 上会让线左右各伸出一截、贴到邻居「民间美术」「书法」的字上（v13-deco.js 实测）。
+     ⚠ 宽度必须写成 calc(100% + 5px)：SVG 是替换元素，只写 left+right+width:auto 时
+     浏览器会拿固有比例（viewBox 120:10 × height 8px）算出 96px 宽、把 right 丢掉。 */
+  .toc__item--line a{position:relative}
+  .toc__line{position:absolute;left:-2px;bottom:-3px;width:calc(100% + 5px);height:8px;color:var(--gray);opacity:.6}
+  .toc__line path{fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round}
+  /* 星芒与涂鸦放在 CONTENTS 右侧那块空白里：目录改成两级分栏后，右下角不再是空格子 */
   .toc__spark{
-    position:absolute;right:clamp(6px,2vw,30px);bottom:-26px;width:clamp(74px,7.6vw,108px);height:auto;
-    pointer-events:none;color:var(--seal);opacity:.68;
+    position:absolute;right:clamp(18px,5vw,96px);top:clamp(6px,1.6vh,14px);
+    width:clamp(58px,5.2vw,86px);height:clamp(58px,5.2vw,86px);color:var(--seal);opacity:.45;pointer-events:none;
   }
   .toc__spark path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
   .toc__doodle{
-    position:absolute;right:clamp(104px,17vw,286px);bottom:-12px;width:clamp(104px,12vw,158px);height:auto;
-    pointer-events:none;color:var(--gray);opacity:.42;
+    position:absolute;right:clamp(104px,12vw,190px);top:clamp(26px,4vh,46px);
+    width:140px;height:58px;color:var(--gray);opacity:.45;pointer-events:none;
   }
   .toc__doodle path{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+
+  /* 窄屏放不下这支铅笔涂鸦：它 58px 高，标题带只有 35px，会压到下面的放大提示 */
   @media (max-width:1024px){
-    .toc__item{width:31.8%}
-    .toc__item:nth-child(3n+2){width:30.6%;margin-top:9px}
-    .toc__item:nth-child(3n+3){width:32%;margin-top:-5px}
-  }
-  @media (max-width:860px){
-    .toc__item{width:47.4%;padding-right:clamp(12px,2.4vw,26px)}
-    .toc__item:nth-child(3n+2),.toc__item:nth-child(3n+3){width:47.4%;margin-left:0;margin-top:0}
-    .toc__item:nth-child(2n){margin-left:2.4%;margin-top:10px}
-    .toc__item:nth-child(5n+4){margin-top:12px}
-    .toc__item:nth-child(7n+6){margin-top:0}
-    .toc__desc{font-size:15.5px}
-  }
-  @media (max-width:760px){
-    .toc__item > a{--numfs:clamp(24px,7vw,32px)}
-    .toc__name{font-size:18px}
-    .toc__ring path{stroke-width:2}
-    .toc__spark{width:70px;right:2px;bottom:-22px}
     .toc__doodle{display:none}
-    .toc__arrow{width:42px;height:27px;margin-left:9px;vertical-align:-7px}
   }
-  /* 窄屏单栏：必须放在 760 断点之后，否则会被上面的两栏规则覆盖 */
-  @media (max-width:560px){
-    .toc__item,.toc__item:nth-child(2n),.toc__item:nth-child(3n+2),.toc__item:nth-child(3n+3),
-    .toc__item:nth-child(5n+4),.toc__item:nth-child(7n+6){
-      width:100%;margin-left:0;margin-top:0;margin-bottom:clamp(20px,3vh,30px);padding-right:0;
-    }
-    .toc__item:nth-child(even){margin-left:12px}
-    .toc__desc{font-size:16px;max-width:23em}
-    .toc__spark{width:62px}
+  /* 手机：字号与行距收紧，保证「标题＋目录」在一屏里放得下 */
+  @media (max-width:760px){
+    .wrap.toc{padding-top:clamp(12px,2.2vh,24px);padding-bottom:34px}
+    .toc__groups{margin-top:14px}
+    .toc__group{margin-bottom:9px}
+    .toc__gh{font-size:17px;gap:.46em}
+    .toc__subs{margin-top:.24em}
+    .toc__item{font-size:15px;line-height:1.5}
+    .toc__item + .toc__item::before{margin:0 .42em}
+    .toc__spark{width:32px;height:32px;right:18px;top:6px}
+    .toc__doodle{display:none}
+  }
+  /* 矮屏（如 320×568、横屏手机）：再压一档，并把放大提示收掉 —— 目录整页可见优先 */
+  @media (max-height:700px){
+    .wrap.toc{padding-top:10px;padding-bottom:20px}
+    .toc__hint{display:none}
+    .toc__groups{margin-top:10px}
+    .toc__group{margin-bottom:7px}
   }
 
   /* ── 通用版心 ────────────────────────────── */
@@ -459,10 +421,6 @@
       flex:0 1 auto;max-width:46vw;
     }
   }
-  /* 761—900px（平板）：hero 图按 53svh 会到 543px，把首屏顶满、下面留一大块空纸 */
-  @media (min-width:761px) and (max-width:900px){
-    .hero__work img{height:clamp(240px,40vh,380px);height:clamp(240px,40svh,380px)}
-  }
   @media (max-width:760px){
     :root{--barh:85px}
     body{font-size:16px;line-height:1.8}
@@ -477,22 +435,10 @@
       gap:20px;font-size:15px;max-width:none;padding:4px 18px 8px;
     }
     .bar__links a{padding:11px 2px 5px;line-height:1.4}
-    .hero{padding:calc(var(--barh) + 10px) 0 12px}
-    .hero__inner{grid-template-columns:1fr;gap:14px;padding:0 18px}
-    .hero__h1{font-size:clamp(30px,8.6vw,42px);margin-top:.3em}
-    .hero__sub{font-size:15.5px;margin-top:.6em;line-height:1.75}
-    .hero__rule{margin-top:14px}
-    .hero__meta{font-size:12.5px;margin-top:10px}
-    .hero__work{justify-self:start;width:100%}
-    .hero__work img{
-      height:min(26vh,214px);
-      height:min(26svh,214px);width:auto;max-width:100%;
-      background:var(--paper-deep);padding:9px;
-    }
-    .hero__work figcaption{margin-top:8px;font-size:13px;text-align:left}
-    .hero__lede{grid-template-columns:1fr;gap:9px;padding:10px 18px 0;margin-top:10px}
-    .hero__lede .lead{font-size:15.5px;line-height:1.78}
-    .hero__lede .teach{font-size:15px;line-height:1.85}
+    .hero{padding:calc(var(--barh) + 6px) 0 8px}
+    .hero__inner{padding:0 18px}
+    .hero__id{font-size:14px}
+    .hero__h1{font-size:clamp(27px,7.6vw,36px);margin-top:.26em}
     .cat__head{grid-template-columns:1fr;gap:8px}
     .plates{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
     .plate img{aspect-ratio:2/1}
@@ -509,68 +455,18 @@
     .lb__prev{left:-8px}
     .lb__next{right:-8px}
   }
-  /* ── 首屏动线（第十一轮 B）─────────────────────────
-     首屏只回答三件事：我是谁 / 我能教什么 / 怎么联系。
-     用「一条一条能查证的证据」而不是统计数字 —— 数字回答不了「能不能带中学」。 */
-  .hero__facts{list-style:none;margin:20px 0 0;padding:0;max-width:38em}
-  .hero__facts li{
-    font-family:var(--kai);font-size:clamp(15px,1.35vw,16.5px);line-height:1.9;
-    color:var(--gray-2);padding:5px 0;border-bottom:1px solid var(--rule);
-  }
-  .hero__facts li:last-child{border-bottom:0}
-  /* 标签定宽：三条细节的左边缘对齐成一列，扫读时视线不用跳。
-     注意只在 ≥901px 成立 —— 768 档的文字列只剩约 400px，12.5em 的标签列会把细节
-     挤成「标签独占一行 + 右侧约 300px 空纸」 */
-  .hero__facts b{color:var(--ink);font-weight:700;white-space:nowrap;display:inline-block;min-width:12.5em;vertical-align:top}
-  .hero__fact{display:inline}
-  @media (min-width:901px){
-    .hero__facts li{display:grid;grid-template-columns:12.5em minmax(0,1fr);column-gap:1.1em;align-items:baseline}
-    .hero__facts b{display:block;min-width:0}
-  }
-  @media (max-width:900px){
-    .hero__facts b{display:inline;min-width:0;margin-right:.5em}
-  }
-  .hero__go{
-    margin:18px 0 0;display:flex;flex-wrap:wrap;gap:8px 26px;align-items:baseline;
-    font-family:var(--kai);font-size:clamp(15px,1.4vw,17px);
-  }
-  .hero__go a{color:var(--seal);text-decoration:none;border-bottom:1px solid var(--seal);white-space:nowrap}
-  .hero__go a:hover{color:var(--ink);border-bottom-color:var(--ink)}
-  .hero__lede .teach a{color:var(--seal);text-decoration:none;border-bottom:1px solid var(--seal);white-space:nowrap}
-  .hero__lede .teach a b{color:var(--seal)}
-  .hero__lede .teach a:hover{border-bottom-color:var(--ink)}
-  .hero__lede .teach a:hover b{color:var(--ink)}
   /* 目录页：一句放大查看提示，替代触屏上全站常显的角标 */
-  .toc__hint{margin:14px 0 0;font-family:var(--kai);font-size:clamp(14px,1.2vw,15px);color:var(--gray)}
+  .toc__hint{margin:12px 0 0;font-family:var(--kai);font-size:clamp(14px,1.2vw,15px);color:var(--gray)}
   .hint-coarse{display:none}
   @media (hover:none),(max-width:900px){.hint-fine{display:none}.hint-coarse{display:inline}}
-  .toc__cn b{color:var(--ink);font-weight:700}
   /* 组标题里的「尺寸 · 奖项」：窄屏把分隔点收掉，两段各自完整换行，不再出现孤立的「·」 */
   @media (max-width:600px){
     .works__group small .nb.sep{display:none}
     .works__group small .nb.sep + .nb{margin-left:.6em}
   }
-  /* 顶栏动线：门类聚成三簇（教学·实践 ／ 十四个门类 ／ 微课·AI），「联系」常驻最右 */
-  .bar__links a[href="#practice"],.bar__links a[href="#micro"]{margin-left:12px}
-  .bar__contact{
-    flex:0 0 auto;text-decoration:none;white-space:nowrap;color:var(--seal);
-    border-bottom:1px solid transparent;padding-bottom:2px;
-  }
-  .bar__contact:hover{border-bottom-color:currentColor}
-  .bar__contact[aria-current]{border-bottom-color:currentColor}
-  @media (max-width:760px){
-    .hero__facts{margin-top:15px}
-    .hero__facts li{font-size:15.5px;line-height:1.8;padding:4px 0}
-    .hero__facts b{display:inline;min-width:0;margin-right:.5em}
-    .hero__go{margin-top:15px;gap:8px 22px;font-size:16px}
-    /* 「联系」钉在署名行右侧：任何滚动位置都点得到（第四段动线的兜底） */
-    .bar__contact{position:absolute;right:10px;top:2px;padding:8px 10px;font-size:15px}
-  }
-  /* ≤900px 的证据行：整条做悬挂缩进（标签顶在左边缘，续行缩进 1.2em）。
-     两段之间只用空格分隔 —— 不放「·」，行尾与行首都不会出现孤立的点号。 */
-  @media (max-width:900px){
-    .hero__facts li{padding-left:1.2em;text-indent:-1.2em}
-  }
+  /* 顶栏动线：栏目按目录的 5 个组在横滑带里分簇（每组第一项左侧留 12px） */
+  .bar__links a.grp{margin-left:12px}
+
   @media (prefers-reduced-motion:reduce){
     *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
   }
