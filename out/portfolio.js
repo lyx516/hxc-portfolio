@@ -112,3 +112,99 @@
     if (e.key === 'ArrowRight') { show(current + 1); }
   });
 })();
+
+// 国画、剪纸、马克笔三栏：排成「等高一行」——每条的宽度按各自图片的长宽比分配，
+// 于是同一行里所有作品高矮一致、完整显示又不裁切，也不需要卡纸留白。
+// 图片比例直接读 <img> 上的 width/height（换图时只要改这两个数字，这里会自动跟着变）。
+// 没有 JS 时退回 CSS 里的等大画框网格，照样整齐。
+(function () {
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.works--justify'));
+  if (!rows.length) { return; }
+
+  function ratio(img) {
+    var w = parseFloat(img.getAttribute('width'));
+    var h = parseFloat(img.getAttribute('height'));
+    return (w > 0 && h > 0) ? w / h : 0;
+  }
+
+  function layout() {
+    rows.forEach(function (row) {
+      var items = Array.prototype.filter.call(row.children, function (el) {
+        return el.className.indexOf('w') === 0 || /(^|\s)w(\s|$)/.test(el.className);
+      });
+      if (!items.length) { return; }
+      var ars = items.map(function (it) {
+        var img = it.querySelector('img');
+        if (!img) { return 0; }
+        var w = parseFloat(img.getAttribute('width'));
+        var h = parseFloat(img.getAttribute('height'));
+        // 顺手把比例写进样式：图片没加载完时也能先把高度占住，页面不会在滚动中「长高」跳位
+        if (w > 0 && h > 0) { img.style.aspectRatio = w + ' / ' + h; }
+        return (w > 0 && h > 0) ? w / h : 0;
+      });
+      if (ars.some(function (a) { return !a; })) { return; }   // 拿不到比例就保持原来的网格
+
+      var vw = document.documentElement.clientWidth;
+      var gap = parseFloat(getComputedStyle(row).columnGap) || 26;
+      var total = row.clientWidth;
+      // 行高上限：容器上的 data-rowh（不写＝不限高，每行铺满版心）。限高后整行由 CSS 居中。
+      var cap = parseFloat(row.getAttribute('data-rowh')) || 0;
+      row.classList.add('works--rowready');
+      var i, k;
+      for (i = 0; i < items.length; i += 1) { items[i].style.width = ''; }
+
+      // 分行：桌面（>1024）按页面里用 data-rowstart 标好的显式分行（国画两幅一行、剪纸 1＋3…）；
+      // 窄屏沿用自动分行（平板 2 件、手机 1 件），免得三件挤成一条。
+      // 清掉上一轮插的换行占位
+      Array.prototype.forEach.call(row.querySelectorAll('.rowbrk'), function (el) { el.parentNode.removeChild(el); });
+
+      var groups = [];
+      if (vw > 1024) {
+        var cur = [];
+        for (i = 0; i < items.length; i += 1) {
+          if (i > 0 && items[i].hasAttribute('data-rowstart') && cur.length) { groups.push(cur); cur = []; }
+          cur.push(i);
+        }
+        if (cur.length) { groups.push(cur); }
+      } else {
+        var per = vw > 760 ? 2 : 1;
+        for (i = 0; i < items.length; i += per) {
+          var g = [];
+          for (k = 0; k < per && i + k < items.length; k += 1) { g.push(i + k); }
+          groups.push(g);
+        }
+      }
+
+      groups.forEach(function (group, gi) {
+        // 真正把行断开：flex 里插一个占满整行的零高元素（否则下一行的第一件会被挤到上一行）
+        if (gi > 0) {
+          var brk = document.createElement('div');
+          brk.className = 'rowbrk';
+          brk.setAttribute('aria-hidden', 'true');
+          row.insertBefore(brk, items[group[0]]);
+        }
+        var sum = 0;
+        for (k = 0; k < group.length; k++) { sum += ars[group[k]]; }
+        var avail = total - gap * (group.length - 1) - 1;   // 留 1px 余量，避免取整后换行
+        var h = avail / sum;
+        var capped = cap > 0 && h > cap;
+        if (capped) { h = cap; }
+        var used = 0;
+        for (k = 0; k < group.length; k++) {
+          // 铺满整行时最后一件吃掉取整误差（同高）；限高时每件按各自比例算，整行交给 CSS 居中
+          var w = (capped || k < group.length - 1) ? Math.round(h * ars[group[k]]) : (avail - used);
+          used += w;
+          items[group[k]].style.width = w + 'px';
+        }
+      });
+    });
+  }
+
+  layout();
+  var timer = null;
+  window.addEventListener('resize', function () {
+    if (timer) { clearTimeout(timer); }
+    timer = setTimeout(layout, 150);
+  });
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(layout); }
+})();
